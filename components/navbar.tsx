@@ -7,7 +7,6 @@ import { ThemeToggle } from './theme-toggle';
 
 export function Navbar() {
     
-const containerRef = useRef<HTMLDivElement>(null);
 const sections = ['Chi sono', 'Carriera', 'Agenda', 'Contatti'];
 const [activeTab, setActiveTab] = useState<number | null>(null);
 

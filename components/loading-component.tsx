@@ -1,7 +1,6 @@
 'use client'
 
 import { useRef} from 'react';
-import { TextRoll } from '@/components/motion-primitives/text-roll';
 import { TextShimmer } from './motion-primitives/text-shimmer';
 import { motion } from 'motion/react';
 
