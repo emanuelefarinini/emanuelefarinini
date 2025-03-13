@@ -29,7 +29,7 @@ export type TextRollProps = {
 
 export function TextRoll({
   children,
-  duration = 0.5,
+  duration = 1,
   getEnterDelay = (i) => i * 0.1,
   getExitDelay = (i) => i * 0.1 + 0.2,
   className,
