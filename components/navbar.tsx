@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useState } from 'react';
+import { useRef, useState, use } from 'react';
 import { motion } from "motion/react";
 import { ThemeToggle } from './theme-toggle';
 
@@ -26,6 +26,16 @@ return (
             {section}
           </a>
         ))}
+          <a
+            key={4}
+            id="nav-link"
+            href={'/curriculum'}
+            className="relative text-md px-4 py-2 text-muted-foreground hover:text-foreground transition-colors w-24"
+            onMouseEnter={() => setActiveTab(4)}
+            onMouseLeave={() => setActiveTab(null)}
+          >
+            Curriculum
+          </a>
         {activeTab !== null && (
           <motion.div
             className="absolute bottom-0 h-0.5 bg-muted-foreground"
