@@ -65,6 +65,7 @@ export default function Home() {
       <div className='relative'>
         {/* Scrollable container for the entire page */}
         <div ref={scrollContainerRef} className="h-[300vh]"> {/* Increased height for more scroll space */}
+        <Navbar/>
           {/* Pinned content container - fades out on scroll */}
           <motion.div 
             className="fixed inset-0 bg-background"
@@ -73,7 +74,7 @@ export default function Home() {
               zIndex: fixedContentZIndex
             }}
           >
-            <Navbar/>
+            
             <div className='w-full h-screen flex items-center'>
               {/* Left side content */}
               <div className='w-1/2 flex justify-center'>
@@ -133,7 +134,7 @@ export default function Home() {
           
           {/* Content that appears after scrolling - positioned for proper reveal */}
           <motion.div 
-            className="w-full min-h-screen px-8"
+            className="w-full h-full px-8"
             style={{ 
               opacity: scrollableContentOpacity,
               zIndex: scrollableContentZIndex,

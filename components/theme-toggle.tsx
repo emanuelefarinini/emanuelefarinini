@@ -13,7 +13,7 @@ export function ThemeToggle({className}:{className?: string}) {
 
   return (
     
-    <div className={cn("bg-muted flex items-center w-full md:w-auto border-slate-200 rounded-full p-[2px]", className)}>
+    <div className={cn("bg-muted flex items-center w-fit md:w-auto border-slate-200 rounded-full p-[2px]", className)}>
       <Button size={'sm'} variant={'ghost'} onClick={() => setTheme("light")} className="group rounded-full bg-white dark:bg-transparent hover:bg-white">
         <Sun className="h-[0.8rem] w-[0.8rem] rotate-0 scale-100 dark:-rotate-90  dark:text-muted-foreground/50 transform-gpu duration-500 transition-transition ease-linear" />
       </Button>

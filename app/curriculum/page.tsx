@@ -12,7 +12,7 @@ export default function Curriculum() {
       <Navbar />
       
       <div className="container mx-auto px-4 py-12 max-w-5xl" ref={contentRef}>
-      <header className="flex flex-row justify-between border-b border-gray-300 pb-6 mb-8">
+      <header className="flex flex-row justify-between items-center border-b border-gray-300 pb-6 mb-8">
         <div>
         <h1 className="text-4xl font-bold mb-2">CURRICULUM VITAE</h1>
         <h2 className="text-2xl font-semibold mb-4">EMANUELE FARININI, PhD</h2>
