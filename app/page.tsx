@@ -8,6 +8,9 @@ import Image from 'next/image';
 
 export default function Home() {
 
+const isProd = process.env.NODE_ENV === 'production';
+const basePath = isProd ? '/mediolevante' : '';
+
   return (
     <>
         <Loading />
@@ -59,7 +62,7 @@ export default function Home() {
                <div className="w-full md:w-full ">
                   <div className="relative h-60 w-60 md:h-120 md:w-120 ml-auto rounded-full overflow-hidden border-4 border-[#3064AC] shadow-lg">
                     <Image
-                      src="/Emanuele-Farinini.webp"
+                      src={`${basePath}/Emanuele-Farinini.webp`} // Ensure correct path
                       alt="Emanuele Farini"
                       fill
                       objectFit="cover"
@@ -168,7 +171,7 @@ export default function Home() {
                 <div className="w-full md:w-1/3">
                   <div className="relative h-64 w-64 mx-auto rounded-full overflow-hidden border-4 border-[#3064AC] shadow-lg">
                     <Image
-                      src="/Emanuele-Farinini.webp"
+                      src={`${basePath}/Emanuele-Farinini.webp`} // Ensure correct path
                       alt="Emanuele Farini"
                       layout="fill"
                       objectFit="cover"

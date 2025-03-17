@@ -7,6 +7,8 @@ import { Footer } from '@/components/footer';
 
 export default function Curriculum() {
   const contentRef = useRef(null);
+  const isProd = process.env.NODE_ENV === 'production';
+  const basePath = isProd ? '/mediolevante' : '';
 
   return (
     <>
@@ -26,7 +28,7 @@ export default function Curriculum() {
               <div className="w-full md:w-1/3">
                   <div className="relative h-64 w-64 mx-auto rounded-full overflow-hidden border-4 border-[#3064AC] shadow-lg">
                     <Image
-                      src="/Emanuele-Farinini.webp"
+                      src={`${basePath}/Emanuele-Farinini.webp`} // Ensure correct path
                       alt="Emanuele Farini"
                       fill
                       objectFit="cover"
