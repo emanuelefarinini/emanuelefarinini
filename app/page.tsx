@@ -5,11 +5,15 @@ import { motion } from 'framer-motion';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import Image from 'next/image';
+import { Phone, MapPin, Mail } from 'lucide-react';
+import { toast } from "sonner"
+import { use, useState } from 'react';
+
 
 export default function Home() {
 
 const isProd = process.env.NODE_ENV === 'production';
-const basePath = isProd ? '/mediolevante' : '';
+const basePath = isProd ? '/mediolevante/' : '';
 
   return (
     <>
@@ -21,7 +25,7 @@ const basePath = isProd ? '/mediolevante' : '';
           <div className='w-full h-screen flex flex-col md:flex-row items-center relative overflow-hidden'>
             
             {/* Left side content */}
-            <div className='w-full md:w-1/2 flex justify-end items-center z-10 px-6 md:px-12 '>
+            <div className='w-full md:w-1/2 flex justify-end items-center z-10 px-6 md:px-12 py-12'>
               <div className="text-center md:text-left">
                 <div className='flex flex-row w-full gap-2 text-center bg-red md:text-left justify-center md:justify-start'>
                   <h1 className='text-3xl md:text-6xl font-bold mb-2'>
@@ -51,7 +55,7 @@ const basePath = isProd ? '/mediolevante' : '';
             </div>
               
             {/* Right side with image */}
-            <div className='relative w-full md:w-1/2 h-full flex items-center justify-start'>
+            <div className='relative w-full md:w-1/2 h-full flex items-center justify-center'>
               <motion.div
                 initial={{ opacity: 0, scale:0 }}
                 animate={{ opacity: 1, scale:1, }}
@@ -181,7 +185,7 @@ const basePath = isProd ? '/mediolevante' : '';
                 </div>
                 <div className="w-full md:w-2/3 text-center md:text-left">
                   <h2 className="text-4xl font-bold mb-4">
-                    <a className='hover:underline' href='/curriculum'>Emanuele Farini</a>
+                    <a className='hover:underline' href={basePath + '/curriculum'}>Emanuele Farinini</a>
                   </h2>
                   <h3 className="text-2xl font-medium text-[#3064AC] mb-4">Candidato per il Municipio Medio Levante</h3>
                   <p className="text-lg mb-4">
@@ -205,16 +209,26 @@ const basePath = isProd ? '/mediolevante' : '';
           <div className="max-w-6xl mx-auto px-6 py-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="group rounded-xl shadow-lg p-6">
-                <span className='flex flex-row items-center gap-2 mb-4'><h3 className="text-2xl font-bold">Rimani aggiornato</h3> <h3 className=' group-hover:text-red-600'>(Building...)</h3></span>
+                <span className='flex flex-row items-center gap-2 mb-4'><h3 className="text-2xl font-bold">Rimani aggiornato</h3> </span>
                 <p className="text-lg mb-4 ">Iscriviti alla nostra newsletter per ricevere aggiornamenti sulla campagna e sulle iniziative nel Municipio.</p>
                 <div className="flex flex-col sm:flex-row gap-2">
                   <input 
                     type="email" 
                     placeholder="La tua email" 
-                    disabled
                     className="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-[#3064AC]"
                   />
-                  <button className="bg-[#3064AC] text-white hover:bg-[#245089] py-3 px-6 rounded-lg font-bold transition duration-300">
+                  <button 
+                  className="bg-[#3064AC] text-white hover:bg-[#245089] py-3 px-6 rounded-lg font-bold transition duration-300"
+                  onClick={() => {
+                      toast("Ci stiamo lavorando!🥵", {
+                        description: "La newsletter sarà presto attiva. Grazie per la tua pazienza!",
+                        action: {
+                          label: "Esci",
+                          onClick: () => console.log("Esci"),
+                        },
+                      })
+                    }
+                  }>
                     Iscriviti
                   </button>
                 </div>
@@ -225,7 +239,7 @@ const basePath = isProd ? '/mediolevante' : '';
                 <p className="text-lg mb-4">Hai domande o vuoi partecipare alla campagna? Scrivici!</p>
                 <div className="space-y-4">
                   <p className="flex items-center">
-                    <span className="w-8 h-8 rounded-full bg-[#3064AC] flex items-center justify-center mr-3">📧</span>
+                    <span className="w-8 h-8 rounded-full bg-[#3064AC] flex items-center justify-center mr-3"><Mail className='text-white' size={16}/></span>
                     <a 
                       href="mailto:emanuelefarinini@gmail.com?subject=Richiesta%20di%20Informazioni&body=Buongiorno%20Emanuele%2C%0A%0A
                             Vorrei%20ricevere%20maggiori%20informazioni%20su%20[qui%20specifica%20di%20cosa%20si%20tratta].%0A%0A
@@ -233,15 +247,15 @@ const basePath = isProd ? '/mediolevante' : '';
                             [Il%20tuo%20nome]"
                       className="flex items-center hover:underline"
                     >
-                      <span className="text-lg">emanuelefarinini@gmail.com</span>
+                      <span className="text-lg">farininixmediolevante@gmail.com</span>
                     </a>
                   </p>
                   <p className="flex items-center">
-                    <span className="w-8 h-8 rounded-full bg-[#3064AC] flex items-center justify-center mr-3">📱</span>
+                    <span className="w-8 h-8 rounded-full bg-[#3064AC] flex items-center justify-center mr-3"><Phone className='text-white' size={16}/></span>
                     <span className="text-lg">+39 333 690 8545</span>
                   </p>
                   <p className="flex items-center">
-                    <span className="w-8 h-8 rounded-full bg-[#3064AC] flex items-center justify-center mr-3">📍</span>
+                    <span className="w-8 h-8 rounded-full bg-[#3064AC] flex items-center justify-center mr-3"><MapPin className='text-white' size={16}/></span>
                     <span className="text-lg">Genova</span>
                   </p>
                 </div>

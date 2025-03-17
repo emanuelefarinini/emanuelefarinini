@@ -26,7 +26,7 @@ export function Loading() {
       >
         <div className='relative flex flex-col md:flex-row w-full items-center justify-center p-8 gap-4 md:gap-4' ref={ref}>
           <TextShimmer className='font-mono text-3xl' duration={2} spread={5}>
-            Emanuele Farini
+            Emanuele Farinini
           </TextShimmer>
           <span className=' text-9xl text-[#3064AC] mb-2'>X</span>
           <TextShimmer className='font-mono text-3xl' duration={2} spread={5}>

@@ -4,11 +4,14 @@ import { Navbar } from '@/components/navbar';
 import { useRef } from 'react';
 import Image from 'next/image';
 import { Footer } from '@/components/footer';
+import { FaLinkedinIn } from 'react-icons/fa6';
+import DownloadPDF from '@/components/pdf';
 
 export default function Curriculum() {
   const contentRef = useRef(null);
   const isProd = process.env.NODE_ENV === 'production';
-  const basePath = isProd ? '/mediolevante' : '';
+  const basePath = isProd ? '/mediolevante/' : '';
+
 
   return (
     <>
@@ -16,14 +19,28 @@ export default function Curriculum() {
       <Navbar />
       
       <div className="container mx-auto px-4  max-w-5xl" ref={contentRef}>
-      <header className="flex flex-row justify-between items-center border-b border-gray-300 py-6 mb-8">
-        <div>
-        <h1 className="text-4xl font-bold mb-2 text-[#3064AC] ">CURRICULUM VITAE</h1>
-        <h2 className="text-2xl font-semibold mb-4">EMANUELE FARININI, PhD</h2>
-        <p className="text-lg mb-2 flex flex-col gap-1 text-muted-foreground">
-            <span>emanuelefarinini@gmail.com</span> 
-            <span>emanuelefarinini@pec.it</span>
-        </p>
+      <header className="flex flex-row justify-between items-center border-b border-gray-300 py-6 mb-8 h-full">
+        <div className='h-full'>
+          <h1 className="text-4xl font-bold mb-2 text-[#3064AC] ">CURRICULUM VITAE</h1>
+          <h2 className="text-2xl font-semibold mb-4">EMANUELE FARININI, PhD</h2>
+          <p className="text-lg mb-2 flex flex-col gap-1 text-muted-foreground">
+          <a 
+            href="mailto:emanuelefarinini@gmail.com?subject=Richiesta%20di%20Informazioni&body=Buongiorno%20Emanuele%2C%0A%0A
+                  Vorrei%20ricevere%20maggiori%20informazioni%20su%20[qui%20specifica%20di%20cosa%20si%20tratta].%0A%0A
+                  In%20attesa%20di%20una%20sua%20risposta%2C%20le%20porgo%20cordiali%20saluti.%0A%0A
+                  [Il%20tuo%20nome]"
+            className="flex items-center hover:underline"
+          >
+            <span className="text-lg">farininixmediolevante@gmail.com</span>
+          </a>
+          </p>
+        <div className='flex flex-row gap-2 items-center mt-auto'>
+          {/* <a href="https://www.linkedin.com/in/emanuele-farinini-609a0a147/" className="hover:text-gray-200 transition">
+            <span className="sr-only">LinkedIn</span>
+            <FaLinkedinIn className="h-6 w-6 text-[#3064AC]"/>
+          </a> */}
+        <DownloadPDF />
+        </div>
         </div>
               <div className="w-full md:w-1/3">
                   <div className="relative h-64 w-64 mx-auto rounded-full overflow-hidden border-4 border-[#3064AC] shadow-lg">
