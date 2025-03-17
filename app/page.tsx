@@ -16,13 +16,11 @@ export default function Home() {
           
           {/* Hero Section */}
           <div className='w-full h-screen flex flex-col md:flex-row items-center relative overflow-hidden'>
-            {/* Background Pattern */}
-            <div className="absolute inset-0  opacity-5 z-0"></div>
             
             {/* Left side content */}
-            <div className='w-full md:w-1/2 flex justify-end items-center z-10 px-6 md:px-12 py-12'>
+            <div className='w-full md:w-1/2 flex justify-end items-center z-10 px-6 md:px-12 '>
               <div className="text-center md:text-left">
-                <div className='flex flex-row w-full gap-2 text-center md:text-left justify-center md:justify-start'>
+                <div className='flex flex-row w-full gap-2 text-center bg-red md:text-left justify-center md:justify-start'>
                   <h1 className='text-3xl md:text-6xl font-bold mb-2'>
                     Farinini
                   </h1>
@@ -39,7 +37,7 @@ export default function Home() {
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 }}
+                  viewport={{ once: true }}
                   className='bg-[#3064AC] p-4 rounded-lg shadow-lg mb-6'
                 >
                   <p className='text-xl md:text-2xl font-medium text-white'>
@@ -50,11 +48,12 @@ export default function Home() {
             </div>
               
             {/* Right side with image */}
-            <div className='relative w-full md:w-1/2 h-full flex items-end justify-start'>
+            <div className='relative w-full md:w-1/2 h-full flex items-center justify-start'>
               <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.3 }}
+                initial={{ opacity: 0, scale:0 }}
+                animate={{ opacity: 1, scale:1, }}
+                transition={{ delay: 5, duration:1 }}
+                viewport={{ once: true }}
                 className='relative h-full md:h-4/5 md:w-4/5'
               >
                <div className="w-full md:w-full ">
@@ -62,7 +61,7 @@ export default function Home() {
                     <Image
                       src="/Emanuele-Farinini.webp"
                       alt="Emanuele Farini"
-                      layout="fill"
+                      fill
                       objectFit="cover"
                       className="rounded-full"
                     />

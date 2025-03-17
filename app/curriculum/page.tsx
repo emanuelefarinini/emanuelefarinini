@@ -28,7 +28,7 @@ export default function Curriculum() {
                     <Image
                       src="/Emanuele-Farinini.webp"
                       alt="Emanuele Farini"
-                      layout="fill"
+                      fill
                       objectFit="cover"
                       className="rounded-full"
                     />
