@@ -17,7 +17,7 @@ export default function Home() {
           {/* Hero Section */}
           <div className='w-full h-screen flex flex-col md:flex-row items-center relative overflow-hidden'>
             {/* Background Pattern */}
-            <div className="absolute inset-0 bg-[url('/pattern.png')] opacity-5 z-0"></div>
+            <div className="absolute inset-0  opacity-5 z-0"></div>
             
             {/* Left side content */}
             <div className='w-full md:w-1/2 flex justify-end items-center z-10 px-6 md:px-12 py-12'>
@@ -60,7 +60,7 @@ export default function Home() {
                <div className="w-full md:w-full ">
                   <div className="relative h-60 w-60 md:h-120 md:w-120 ml-auto rounded-full overflow-hidden border-4 border-[#3064AC] shadow-lg">
                     <Image
-                      src="/Lele.png"
+                      src="/Emanuele-Farinini.webp"
                       alt="Emanuele Farini"
                       layout="fill"
                       objectFit="cover"
@@ -169,7 +169,7 @@ export default function Home() {
                 <div className="w-full md:w-1/3">
                   <div className="relative h-64 w-64 mx-auto rounded-full overflow-hidden border-4 border-[#3064AC] shadow-lg">
                     <Image
-                      src="/Lele.png"
+                      src="/Emanuele-Farinini.webp"
                       alt="Emanuele Farini"
                       layout="fill"
                       objectFit="cover"
