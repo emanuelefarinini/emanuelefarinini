@@ -27,7 +27,7 @@ export function Navbar() {
   const navLinksRef = useRef<Array<HTMLAnchorElement | null>>([]);
 
   const sections = [
-    { name: 'Home', isAnchor: false, path: '/mediolevante' },
+    { name: 'Home', isAnchor: false, path: '/mediolevante/' },
     { name: 'Curriculum', isAnchor: false, path: basePath+'curriculum' }
   ];
   
