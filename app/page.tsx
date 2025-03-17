@@ -7,7 +7,6 @@ import { Footer } from '@/components/footer';
 import Image from 'next/image';
 import { Phone, MapPin, Mail } from 'lucide-react';
 import { toast } from "sonner"
-import { use, useState } from 'react';
 
 
 export default function Home() {

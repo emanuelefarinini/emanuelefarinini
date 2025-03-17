@@ -4,7 +4,6 @@ import { Navbar } from '@/components/navbar';
 import { useRef } from 'react';
 import Image from 'next/image';
 import { Footer } from '@/components/footer';
-import { FaLinkedinIn } from 'react-icons/fa6';
 import DownloadPDF from '@/components/pdf';
 
 export default function Curriculum() {
