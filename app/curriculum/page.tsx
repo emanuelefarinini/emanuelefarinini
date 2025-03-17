@@ -26,7 +26,7 @@ export default function Curriculum() {
               <div className="w-full md:w-1/3">
                   <div className="relative h-64 w-64 mx-auto rounded-full overflow-hidden border-4 border-[#3064AC] shadow-lg">
                     <Image
-                      src="/Lele.png"
+                      src="/Emanuele-Farinini.webp"
                       alt="Emanuele Farini"
                       layout="fill"
                       objectFit="cover"
