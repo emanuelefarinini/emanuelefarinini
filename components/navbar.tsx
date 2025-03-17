@@ -20,14 +20,14 @@ import { cn } from '@/lib/utils';
 export function Navbar() {
     
   const isProd = process.env.NODE_ENV === 'production';
-  const basePath = isProd ? '/mediolevante' : '';
+  const basePath = isProd ? '/mediolevante/' : '';
   
   const pathname = usePathname();
   const [navLinkRects, setNavLinkRects] = useState<DOMRect[]>([]);
   const navLinksRef = useRef<Array<HTMLAnchorElement | null>>([]);
 
   const sections = [
-    { name: 'Home', isAnchor: false, path: '/' },
+    { name: 'Home', isAnchor: false, path: '/mediolevante' },
     { name: 'Curriculum', isAnchor: false, path: basePath+'curriculum' }
   ];
   
