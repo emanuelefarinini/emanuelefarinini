@@ -7,10 +7,12 @@ import {
   Sheet,
   SheetContent,
   SheetDescription,
+  SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import Image from 'next/image';
 import { Button } from "@/components/ui/button"
 import { usePathname } from 'next/navigation';
 import { Menu } from 'lucide-react';
@@ -44,7 +46,15 @@ export function Navbar() {
   }, []);
 
 return (  
-    <nav className="sticky top-0 flex w-full h-auto p-4 justify-center bg-background z-50 border-b-[1px] border-muted">
+    <nav className="sticky top-0 flex flex-row w-full h-auto p-4 justify-between bg-background z-50 border-b-[1px] border-muted">
+        <div className="hidden md:flex mr-auto sticky h-12 w-12 md:h-12 md:w-12 rounded-full shadow-lg ">
+          <Image
+            src={`${basePath}/l_orgoglio_liguria.webp`} // Ensure correct path
+            alt="Orgoglio Liguria"
+            fill
+            className="rounded-full object-fill"
+          />
+        </div>
       <div className="hidden md:flex relative">
         {sections.map((section, index) => (
           <a
@@ -79,6 +89,7 @@ return (
           />
         )}
       </div>
+      
     <Sheet>
       <SheetTrigger asChild className='md:hidden'>
         <Button variant="outline"><Menu/></Button>
@@ -88,9 +99,9 @@ return (
           <SheetTitle 
           className='mt-6'
           >
-            Emanuele Farini X Mediolevante</SheetTitle>
+            Emanuele Farini X Genova</SheetTitle>
           <SheetDescription className=''>
-            Vogliamo mettere qualcosa qui?
+            Per Genova e i suoi cittadini
           </SheetDescription>
         </SheetHeader>
         <div className="grid gap-4 py-4 p-4">
@@ -105,7 +116,19 @@ return (
           </a>
         ))}
         </div>
+        <SheetFooter>
+        <div className="absolute bottom-4 right-4 h-12 w-12 md:h-12 md:w-12 ml-auto rounded-full overflow-hidden shadow-lg ">
+          <Image
+            src={`${basePath}/l_orgoglio_liguria.webp`} // Ensure correct path
+            alt="Orgoglio Liguria"
+            fill
+            objectFit="cover"
+            className="rounded-full"
+          />
+        </div>
+      </SheetFooter>
       </SheetContent>
+      
     </Sheet>
       <ThemeToggle className='ml-auto'/>
     </nav>

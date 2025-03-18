@@ -18,43 +18,45 @@ export default function Curriculum() {
       <Navbar />
       
       <div className="container mx-auto px-4  max-w-5xl" ref={contentRef}>
-      <header className="flex flex-row justify-between items-center border-b border-gray-300 py-6 mb-8 h-full">
+      <header className="flex flex-col md:flex-row justify-between items-center border-b border-gray-300 py-6 mb-8 gap-4 h-full">
         <div className='h-full'>
           <h1 className="text-4xl font-bold mb-2 text-[#3064AC] ">CURRICULUM VITAE</h1>
           <h2 className="text-2xl font-semibold mb-4">EMANUELE FARININI, PhD</h2>
           <p className="text-lg mb-2 flex flex-col gap-1 text-muted-foreground">
           <a 
-            href="mailto:emanuelefarinini@gmail.com?subject=Richiesta%20di%20Informazioni&body=Buongiorno%20Emanuele%2C%0A%0A
+            href="mailto:farinixgenova@gmail.com?subject=Richiesta%20di%20Informazioni&body=Buongiorno%20Emanuele%2C%0A%0A
                   Vorrei%20ricevere%20maggiori%20informazioni%20su%20[qui%20specifica%20di%20cosa%20si%20tratta].%0A%0A
                   In%20attesa%20di%20una%20sua%20risposta%2C%20le%20porgo%20cordiali%20saluti.%0A%0A
                   [Il%20tuo%20nome]"
             className="flex items-center hover:underline"
           >
-            <span className="text-lg">farininixmediolevante@gmail.com</span>
+            <span className="text-lg">farininixgenova@gmail.com</span>
           </a>
           </p>
-        <div className='flex flex-row gap-2 items-center mt-auto'>
-          {/* <a href="https://www.linkedin.com/in/emanuele-farinini-609a0a147/" className="hover:text-gray-200 transition">
-            <span className="sr-only">LinkedIn</span>
-            <FaLinkedinIn className="h-6 w-6 text-[#3064AC]"/>
-          </a> */}
-        <DownloadPDF />
+          <div className='hidden md:flex flex-row gap-2 items-start mt-auto'>
+            <DownloadPDF />
+          </div>
         </div>
-        </div>
-              <div className="w-full md:w-1/3">
-                  <div className="relative h-64 w-64 mx-auto rounded-full overflow-hidden border-4 border-[#3064AC] shadow-lg">
-                    <Image
-                      src={`${basePath}/Emanuele-Farinini.webp`} // Ensure correct path
-                      alt="Emanuele Farini"
-                      fill
-                      objectFit="cover"
-                      className="rounded-full"
-                    />
-                  </div>
-                </div>
+          
+          <div className="w-full md:w-1/3">
+            <div className="relative h-64 w-64 mx-auto rounded-full overflow-hidden border-4 border-[#3064AC] shadow-lg">
+              <Image
+                src={`${basePath}/Emanuele-Farinini.webp`} // Ensure correct path
+                alt="Emanuele Farini"
+                fill
+                objectFit="cover"
+                className="rounded-full"
+              />
+            </div>
+          </div>
+
+          <div className='md:hidden w-full flex flex-row gap-2 justify-center mt-auto'>
+            <DownloadPDF />
+          </div>
         </header>
 
         <section className="mb-10">
+        <h2 className="text-2xl font-bold mb-4 text-[#3064AC]">BIOGRAFIA</h2>
           <p className="mb-4">
             Emanuele Farinini è nato a Genova (Italia) il 31 ottobre 1994.
           </p>
@@ -84,6 +86,9 @@ export default function Curriculum() {
           </p>
           <p className="mb-4">
             È anche appassionato nell&apos;applicare le sue competenze professionali alle passioni personali, che spaziano dallo sport all&apos;ottimizzazione delle ricette culinarie. Ha collaborato con Francesco Cattaneo, direttore tecnico capo della Federazione Italiana Canottaggio, per migliorare le prestazioni degli atleti olimpici italiani in preparazione per Tokyo 2020. Inoltre, ha ottimizzato la ricetta tradizionale di pesto con pestello e mortaio attraverso lo studio dei rapporti degli ingredienti mediante Mixture Design, diventando finalista al &apos;IX Genova Pesto World Championship&apos; e competendo tra 100 semifinalisti provenienti da tutto il mondo (2021). La sua analisi statistica dei dati storici di tutte le edizioni del campionato mondiale è stata presentata a Palazzo della Regione Liguria (Genova), in collaborazione con Ben Thuriaux-Alemán, partner di Arthur D. Little (2024).
+          </p>
+          <p className='mb-4'>
+            È autore del capitolo “Experimental Design” del libro “Basic Chemometrics for Analytical Chemists”, in corso di stampa da World Scientific Publishing.
           </p>
           <p className="mb-4">
             Parla fluentemente le seguenti lingue: italiano, inglese; conoscenza di base: tedesco.
@@ -120,7 +125,15 @@ export default function Curriculum() {
         </section>
         
         <section className="mb-10">
-          <h2 className="text-2xl font-bold mb-4 text-[#3064AC]">PUBBLICAZIONI SCIENTIFICHE</h2>
+          <h2 className="text-2xl font-bold mb-4 text-[#3064AC]">PUBBLICAZIONI</h2>
+          <div className='mb-4'>
+          <h4 className='text-lg font-semibold mb-4 border-b-[1px] border-dashed'>Libri</h4>
+            <li className='list-disc'> 
+              È autore del capitolo “Experimental Design” del libro “Basic Chemometrics for Analytical Chemists”, in corso di stampa da World Scientific Publishing.
+            </li>
+          </div>
+
+          <h4 className='text-lg font-semibold mb-4 border-b-[1px] border-dashed'>Articoli scientifici</h4>
           <ol className="list-decimal pl-6 mb-6 space-y-3">
             <li>Monteleone, L.; Speciale, A.; Valenti, G. E.; Leardi, R.; Farinini, E.; Traverso, N.; Ravera, S.; Garbarino, O.; Domenicotti, C (2021). &quot;PKCα Inhibition as a Strategy to Sensitize Neuroblastoma Stem Cells to Etoposide by Stimulating Ferroptosis&quot;. Antioxidants, 10(5), 691. DOI: 10.3390/antiox10050691</li>
             <li>Marengo, B.; Pulliero, A.; Corrias, M. V.; Leardi, R.; Farinini, E.; Fronza, G.; Domenicotti, C. (2021). &quot;Potential Role of miRNAs in the Acquisition of Chemoresistance in Neuroblastoma&quot;. Journal of personalized medicine, 11(2), 107. DOI: 10.3390/jpm11020107.</li>

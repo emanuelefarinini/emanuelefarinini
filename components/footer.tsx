@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { FaLinkedinIn } from "react-icons/fa6";
 
 
+
 export function Footer() {
   return (
     <footer className="bg-[#3064AC] text-white py-8">
@@ -17,19 +18,19 @@ export function Footer() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="w-full flex flex-row gap-2 justify-between items-center"
+            className="w-full grid grid-cols-2 md:flex md:flex-row gap-2 justify-between items-start md:items-center"
           >
-                <span className='flex flex-col gap-2'>© 2025 Farinini X Mediolevante. <p>Tutti i diritti riservati.</p></span>
+                <span className='flex flex-col gap-2 text-sm'>© 2025 Farinini X Genova. <p>Tutti i diritti riservati.</p></span>
 
-                <div className='flex flex-row gap-1'>
-                    <p>
-                    Sito web progettato da{' '}
+                <div className='flex flex-row flex-wrap gap-1 text-sm '>
+                    <p className='inline-block '>
+                    Progettato e sviluppato da{' '}
                     </p>
                     <Link 
                         href="https://www.linkedin.com/in/edoardogronda110/" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="font-medium hover:text-gray-200 transition hover:underline underline-offset-2"
+                        className="font-medium hover:text-gray-200 transition hover:underline underline-offset-2 inline-block"
                     >
                         Edoardo Gronda
                     </Link>
