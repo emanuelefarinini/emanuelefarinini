@@ -30,7 +30,7 @@ export function Loading() {
           </TextShimmer>
           <span className=' text-9xl text-[#3064AC] mb-2'>X</span>
           <TextShimmer className='font-mono text-3xl' duration={2} spread={5}>
-            Mediolevante
+            Genova
           </TextShimmer>
           
         </div>

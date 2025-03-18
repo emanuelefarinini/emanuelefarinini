@@ -164,7 +164,7 @@ const basePath = isProd ? '/mediolevante/' : '';
               className="bg-[#3064AC] rounded-xl p-8 text-center shadow-xl"
             >
               <h2 className="text-3xl font-bold mb-4 text-white">Facciamo la differenza insieme</h2>
-              <p className="text-xl mb-6 text-white">Il tuo voto è importante per trasformare il Municipio Medio Levante</p>
+              <p className="text-xl mb-6 text-white">Il tuo voto è importante per rendere Genova un posto migliore</p>
               <div className="flex flex-col md:flex-row justify-center gap-4">
               <button 
                 className="bg-white hover:bg-gray-100 text-[#3064AC] py-3 px-8 rounded-full text-lg font-bold transition duration-300 shadow-lg"
