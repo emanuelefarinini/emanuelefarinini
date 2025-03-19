@@ -49,7 +49,7 @@ return (
     <nav className="sticky top-0 flex flex-row w-full h-auto p-4 justify-between bg-background z-50 border-b-[1px] border-muted">
         <div className="hidden md:flex mr-auto sticky h-12 w-12 md:h-12 md:w-12 rounded-full shadow-lg ">
           <Image
-            src={`${basePath}/l_orgoglio_liguria.webp`} // Ensure correct path
+            src={`${basePath}/Bucci-NM.png`} // Ensure correct path
             alt="Orgoglio Liguria"
             fill
             className="rounded-full object-fill"
@@ -119,7 +119,7 @@ return (
         <SheetFooter>
         <div className="absolute bottom-4 right-4 h-12 w-12 md:h-12 md:w-12 ml-auto rounded-full overflow-hidden shadow-lg ">
           <Image
-            src={`${basePath}/l_orgoglio_liguria.webp`} // Ensure correct path
+            src={`${basePath}/Bucci-NM.png`} // Ensure correct path
             alt="Orgoglio Liguria"
             fill
             objectFit="cover"

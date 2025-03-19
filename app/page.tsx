@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import Image from 'next/image';
-import { Phone, MapPin, Mail } from 'lucide-react';
+import { Phone, MapPin, Mail, X } from 'lucide-react';
 import { toast } from "sonner"
 
 
@@ -39,7 +39,7 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
                   </h1>
                 </div>
                 <span className='flex flex-row flex-wrap justify-center md:justify-start gap-1 text-xl md:text-3xl font-base mb-6 text-muted-foreground'>
-                  <p className="w-full text-center md:text-left md:w-auto">Candidato per i municipi:</p>
+                  <p className="w-full text-center md:text-left md:w-auto">Candidato lista civica Orgoglio Genova per i municipi:</p>
                   <div className="flex flex-row justify-center md:justify-start gap-1 w-full md:w-auto">
                     <p className='border-b-[1px] border-dashed mr-1 text-[#3064AC] border-[#3064AC]'>Medio Levante</p>
                     <p>e</p>
@@ -226,34 +226,36 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
           
           {/* Newsletter and Contact */}
           <div className="max-w-4xl mx-auto px-6 py-16">
-            <div className="grid grid-cols-1 gap-8">
-              {/* <div className="group rounded-xl shadow-lg p-6">
-                <span className='flex flex-row items-center gap-2 mb-4'><h3 className="text-2xl font-bold">Rimani aggiornato</h3> </span>
-                <p className="text-lg mb-4 ">Iscriviti alla nostra newsletter per ricevere aggiornamenti sulla campagna e sulle iniziative nel Municipio.</p>
-                <div className="flex flex-col sm:flex-row gap-2">
-                  <input 
-                    type="email" 
-                    placeholder="La tua email" 
-                    className="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-[#3064AC]"
-                  />
-                  <button 
-                  className="bg-[#3064AC] text-white hover:bg-[#245089] py-3 px-6 rounded-lg font-bold transition duration-300"
-                  onClick={() => {
-                      toast("Ci stiamo lavorando!🥵", {
-                        description: "La newsletter sarà presto attiva. Grazie per la tua pazienza!",
-                        action: {
-                          label: "Esci",
-                          onClick: () => console.log("Esci"),
-                        },
-                      })
-                    }
-                  }>
-                    Iscriviti
-                  </button>
-                </div>
-              </div> */}
+            <div className="flex flex-col rounded-xl shadow-lg p-6 justify-center">
+            <h3 className="text-2xl font-bold mb-4">Come votarmi</h3>
+<div className='grid grid-cols-1 md:grid-cols-4 h-auto w-full border-[1px] rounded-md p-4 md:p-6 gap-4 md:gap-0'>
+  <div className="relative h-16 w-16 md:h-30 md:w-30 rounded-full shadow-lg mx-auto md:mx-0">
+    <X className='absolute inset-0 text-black z-20 size-16 md:size-30'/>
+    <Image
+      src={`${basePath}/Bucci-NM.png`}
+      alt="Orgoglio Liguria"
+      fill
+      className="rounded-full object-fill"
+    />
+  </div>
+  
+  <div className='col-span-1 md:col-span-3 flex flex-col justify-between py-2 md:py-8 space-y-4 md:space-y-8'>
+    <div className='w-full border-b-[1px] border-dashed text-center md:text-left text-lg md:text-xl font-semibold'>
+      EMANUELE FARINI
+    </div>
+
+    <div className='w-full border-b-[1px] border-dashed'>
+      {/* Second Line */}
+    </div>
+  </div>
+</div>
               
-              <div className="flex flex-col rounded-xl shadow-lg p-6  justify-center">
+            </div>
+
+            <div className="grid grid-cols-1 gap-8 ">
+              
+              
+              <div className="flex flex-col rounded-xl shadow-lg p-6 justify-center">
                 <h3 className="text-2xl font-bold mb-4">Contattami</h3>
                 <p className="text-lg mb-4">Hai domande o vuoi partecipare alla campagna? Scrivici!</p>
                 <div className="flex flex-col md:flex-row w-full justify-between gap-2">

@@ -49,7 +49,7 @@ export function Footer() {
                 <div className="md:hidden flex flex-row items-center space-x-4 w-full justify-between col-span-2">
                   <div className="sticky h-12 w-12 md:h-12 md:w-12 rounded-full shadow-lg ">
                       <Image
-                        src={`${basePath}/l_orgoglio_liguria.webp`} // Ensure correct path
+                        src={`${basePath}/Bucci-NM.png`} // Ensure correct path
                         alt="Orgoglio Liguria"
                         fill
                         className="rounded-full object-fill ml-auto"
