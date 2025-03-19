@@ -59,7 +59,7 @@ export default function Curriculum() {
           <h2 className="text-2xl font-bold mb-4 text-[#3064AC]">IN POCHE PAROLE</h2>
           <h2 className="text-md font-bold mb-2">Approccio Multivariato per la risoluzione dei problemi</h2>
           <p className="mb-6">
-          Specializzato nell'uso dell'Experimental Design e dell'Analisi Multivariata per l'ottimizzazione di processi, il monitoraggio e il controllo qualità in ambito farmaceutico, alimentare e manifatturiero.
+          Specializzato nell&apos;uso dell&apos;Experimental Design e dell&apos;Analisi Multivariata per l&apos;ottimizzazione di processi, il monitoraggio e il controllo qualità in ambito farmaceutico, alimentare e manifatturiero.
           </p>
           <h2 className="text-md font-bold mb-2 ">Ricerca e Collaborazioni Internazionali</h2>
           <p className="mb-6">
