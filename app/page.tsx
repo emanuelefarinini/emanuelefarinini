@@ -72,7 +72,7 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
                   <div className="relative h-72 w-72 md:h-160 md:w-160 ml-auto rounded-full overflow-hidden border-4 border-[#3064AC]">
                     <Image
                       src={`${basePath}/Emanuele-Farinini.webp`} // Ensure correct path
-                      alt="Emanuele Farini"
+                      alt="Emanuele Farinini"
                       fill
                       objectFit="cover"
                       className="rounded-full"
@@ -228,27 +228,27 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
           <div className="max-w-4xl mx-auto px-6 py-16">
             <div className="flex flex-col rounded-xl shadow-lg p-6 justify-center">
             <h3 className="text-2xl font-bold mb-4">Come votarmi</h3>
-<div className='grid grid-cols-1 md:grid-cols-4 h-auto w-full border-[1px] rounded-md p-4 md:p-6 gap-4 md:gap-0'>
-  <div className="relative h-16 w-16 md:h-30 md:w-30 rounded-full shadow-lg mx-auto md:mx-0">
-    <X className='absolute inset-0 text-black z-20 size-16 md:size-30'/>
-    <Image
-      src={`${basePath}/Bucci-NM.png`}
-      alt="Orgoglio Liguria"
-      fill
-      className="rounded-full object-fill"
-    />
-  </div>
-  
-  <div className='col-span-1 md:col-span-3 flex flex-col justify-between py-2 md:py-8 space-y-4 md:space-y-8'>
-    <div className='w-full border-b-[1px] border-dashed text-center md:text-left text-lg md:text-xl font-semibold'>
-      EMANUELE FARINI
-    </div>
+              <div className='grid grid-cols-3 md:grid-cols-4 h-auto w-full border-[1px] rounded-md p-6 gap-0'>
+                <div className="relative h-20 w-20 md:h-30 md:w-30 rounded-full shadow-lg mx-0">
+                  <X className='absolute inset-0 text-black z-20 size-20 md:size-30'/>
+                  <Image
+                    src={`${basePath}/Bucci-NM.png`}
+                    alt="Orgoglio Liguria"
+                    fill
+                    className="rounded-full object-fill"
+                  />
+                </div>
+                
+                <div className='col-span-2 flex flex-col justify-between px-4 py-2 md:py-4'>
+                  <div className='w-full border-b-[1px] border-dashed text-center md:text-left text-lg md:text-3xl italic font-semibold'>
+                    FARININI
+                  </div>
 
-    <div className='w-full border-b-[1px] border-dashed'>
-      {/* Second Line */}
-    </div>
-  </div>
-</div>
+                  <div className='w-full border-b-[1px] border-dashed'>
+                    {/* Second Line */}
+                  </div>
+                </div>
+              </div>
               
             </div>
 
