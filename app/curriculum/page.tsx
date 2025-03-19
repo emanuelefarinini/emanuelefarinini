@@ -9,7 +9,7 @@ import DownloadPDF from '@/components/pdf';
 export default function Curriculum() {
   const contentRef = useRef(null);
   const isProd = process.env.NODE_ENV === 'production';
-  const basePath = isProd ? '/mediolevante/' : '';
+  const basePath = isProd ? '/emanuelefarinini/' : '';
 
 
   return (
@@ -54,6 +54,23 @@ export default function Curriculum() {
             <DownloadPDF />
           </div>
         </header>
+
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-4 text-[#3064AC]">IN POCHE PAROLE</h2>
+          <h2 className="text-md font-bold mb-2">Approccio Multivariato per la risoluzione dei problemi</h2>
+          <p className="mb-6">
+          Specializzato nell'uso dell'Experimental Design e dell'Analisi Multivariata per l'ottimizzazione di processi, il monitoraggio e il controllo qualità in ambito farmaceutico, alimentare e manifatturiero.
+          </p>
+          <h2 className="text-md font-bold mb-2 ">Ricerca e Collaborazioni Internazionali</h2>
+          <p className="mb-6">
+          Esperienza accademica e industriale con pubblicazioni su riviste di alto impatto e collaborazioni con aziende e centri di ricerca leader a livello internazionale.
+          </p>
+          <h2 className="text-md font-bold mb-2">Didattica e Divulgazione</h2>
+          <p className="mb-6">
+          Docente in corsi universitari e scuole di chemiometria, autore di contenuti educativi (capitolo di libro, software open-source, canale YouTube), con un forte impegno nella diffusione delle metodologie chemiometriche.
+          </p>
+
+        </section >
 
         <section className="mb-10">
         <h2 className="text-2xl font-bold mb-4 text-[#3064AC]">BIOGRAFIA</h2>

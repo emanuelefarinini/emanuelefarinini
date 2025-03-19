@@ -13,7 +13,7 @@ import { toast } from "sonner"
 export default function Home() {
 
 const isProd = process.env.NODE_ENV === 'production';
-const basePath = isProd ? '/mediolevante/' : '';
+const basePath = isProd ? '/emanuelefarinini/' : '';
 
   return (
     <>
@@ -102,7 +102,7 @@ const basePath = isProd ? '/mediolevante/' : '';
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white flex items-center justify-center mr-3 mt-1">✓</div>
-                    <span className="text-lg"><strong>Comunicazione diretta</strong> tra cittadini e Municipio Creazione di una piattaforma online per segnalazioni, aggiornamenti e proposte in tempo reale.</span>
+                    <span className="text-lg"><strong>Comunicazione diretta:</strong> Creazione di una piattaforma online semplice per segnalazioni, aggiornamenti e proposte in tempo reale per municipio.</span>
                   </li>
                   <li className="flex items-start">
                     <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white flex items-center justify-center mr-3 mt-1">✓</div>
