@@ -69,6 +69,11 @@ export default function Curriculum() {
           <p className="mb-6">
           Docente in corsi universitari e scuole di chemiometria, autore di contenuti educativi (capitolo di libro, software open-source, canale YouTube), con un forte impegno nella diffusione delle metodologie chemiometriche.
           </p>
+          <h2 className="text-md font-bold mb-2"> Passione per lo sport</h2>
+          <p className="mb-6">
+          Canottiere presso il Rowing Club Genovese 1890, velista presso la Lega Navale Italiana, sezione Genova Centro.
+          </p>
+
 
         </section >
 
