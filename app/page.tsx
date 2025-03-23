@@ -102,12 +102,9 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white flex items-center justify-center mr-3 mt-1">✓</div>
-                    <span className="text-lg"><strong>Comunicazione diretta:</strong> Creazione di una piattaforma online semplice per segnalazioni, aggiornamenti e proposte in tempo reale per municipio.</span>
+                    <span className="text-lg"><strong>Potenziamento delle piattaforme digitali: </strong> Integrazione di strumenti di analisi dei dati territoriali per fornire aggiornamenti puntuali e interventi mirati, migliorando la comunicazione in tempo reale tra cittadini e Municipio.</span>
                   </li>
-                  <li className="flex items-start">
-                    <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white flex items-center justify-center mr-3 mt-1">✓</div>
-                    <span className="text-lg"><strong>Ottimizzazione dei servizi:</strong> Uso di strumenti di analisi dei dati per rendere più efficienti la manutenzione delle strade, la gestione dei rifiuti e il trasporto pubblico.</span>
-                  </li>
+                  
                 </ul>
               </motion.div>
               
@@ -119,16 +116,15 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
                 transition={{ delay: 0.2 }}
                 className=" rounded-xl shadow-lg p-6 border-t-4 border-[#3064AC] hover:transform hover:scale-105 transition duration-300"
               >
-                <h3 className="text-2xl font-bold mb-4 text-[#3064AC]">2. Riqualificazione e vivibilità</h3>
-                <p className="text-lg mb-4">Per un territorio più curato e sicuro</p>
+                <h3 className="text-2xl font-bold mb-4 text-[#3064AC]">2.Sanità, Farmacia dei Servizi e Prevenzione</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white  flex items-center justify-center mr-3 mt-1">✓</div>
-                    <span className="text-lg"><strong>Aree verdi e spazi pubblici</strong> più curati e sicuri. Creazione di percorsi sportivi all&apos;aperto, potenziamento della manutenzione e maggiore sicurezza nei parchi e nelle piazze.</span>
+                    <span className="text-lg"><strong> Farmacia dei servizi:</strong> Sviluppo di una rete integrata di farmacie capaci di offrire consulenze sanitarie, gestione delle terapie e supporto a domicilio, per facilitare l’accesso ai servizi di salute.</span>
                   </li>
                   <li className="flex items-start">
                     <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white flex items-center justify-center mr-3 mt-1">✓</div>
-                    <span className="text-lg"><strong>Interventi mirati</strong> su strade e marciapiedi Mappatura dei punti critici e gestione più efficace degli interventi di ripristino.</span>
+                    <span className="text-lg"><strong>Campagne di prevenzione: </strong> Promozione di campagne di sensibilizzazione e prevenzione, con particolare attenzione alla popolazione anziana di Genova, per migliorare la qualità della vita e ridurre il carico sulle strutture ospedaliere.</span>
                   </li>
                 </ul>
               </motion.div>
@@ -141,16 +137,16 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
                 transition={{ delay: 0.3 }}
                 className=" rounded-xl shadow-lg p-6 border-t-4 border-[#3064AC] hover:transform hover:scale-105 transition duration-300"
               >
-                <h3 className="text-2xl font-bold mb-4 text-[#3064AC]">3. Sport, benessere e inclusione</h3>
+                <h3 className="text-2xl font-bold mb-4 text-[#3064AC]">3. Lavoro, Sport, Benessere e Inclusione</h3>
                 <p className="text-lg mb-4">Per una comunità attiva e solidale</p>
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white  flex items-center justify-center mr-3 mt-1">✓</div>
-                    <span className="text-lg"><strong>Sport per tutti:</strong> Eventi e iniziative per promuovere lo sport come strumento di benessere, inclusione e socialità.</span>
+                    <span className="text-lg"><strong>Formazione e cultura del benessere:</strong> Collaborazioni con scuole e università per percorsi educativi su lavoro, scienza, sport e salute.</span>
                   </li>
                   <li className="flex items-start">
                     <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white flex items-center justify-center mr-3 mt-1">✓</div>
-                    <span className="text-lg"><strong>Formazione e cultura</strong> del benessere Collaborazioni con scuole e università per percorsi educativi su scienza, sport e salute.</span>
+                    <span className="text-lg"><strong>Sport per tutti:</strong> Organizzazione di eventi e iniziative che promuovano lo sport come strumento di benessere, inclusione e socialità.</span>
                   </li>
                 </ul>
               </motion.div>
@@ -163,14 +159,14 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
               viewport={{ once: true }}
               className="bg-[#3064AC] rounded-xl p-8 text-center shadow-xl"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Facciamo la differenza insieme</h2>
-              <p className="text-xl mb-6 text-white">Il tuo voto è importante per rendere Genova un posto migliore</p>
+              <h2 className="text-3xl font-bold mb-4 text-white"> 📌 Due punti ancora da scrivere… con te!</h2>
+              <p className="text-xl mb-6 text-white"> 📢  La vostra voce conta! Il tuo contributo è importante.</p>
               <div className="flex flex-col md:flex-row justify-center gap-4">
               <button 
                 className="bg-white hover:bg-gray-100 text-[#3064AC] py-3 px-8 rounded-full text-lg font-bold transition duration-300 shadow-lg"
                 onClick={() => {
-                  toast("Ci stiamo lavorando! 🥵", {
-                    description: "Il programma nei suoi dettagli sarà presto visibile!",
+                  toast("Scrivimi🚀", {
+                    description: "Costruiamo insieme il futuro di Genova!",
                     action: {
                       label: "Esci",
                       onClick: () => console.log("Esci"),
@@ -178,7 +174,7 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
                   })
                 }
               }>
-                Programma completo
+                Scrivimi le tue idee e segnalazioni per migliorare il nostro territorio!<br/>
               </button>
               </div>
             </motion.div>
@@ -227,8 +223,13 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
           {/* Newsletter and Contact */}
           <div className="max-w-4xl mx-auto px-6 py-16">
             <div className="flex flex-col rounded-xl shadow-lg p-6 justify-center">
-            <h3 className="text-2xl font-bold mb-4">Come votarmi</h3>
-              <div className='grid grid-cols-3 md:grid-cols-4 h-auto w-full border-[1px] rounded-md p-6 gap-0'>
+            <h3 className="text-2xl font-bold mb-4">Come votarmi il 25-26 maggio</h3>
+            <div className="gap-1 mb-4 inline-block">
+              <span>
+                Nella scheda <span className="font-bold">rosa</span> (responsabile per l&apos;elezione del Presidente del Municipio e dei Consiglieri Municipali), crociare il simbolo della lista e specificare il mio nome come nell&apos;esempio! 🚀
+              </span>
+            </div>
+              <div className='grid grid-cols-3 md:grid-cols-4 h-auto w-full border-[6px] border-pink-400 bg-pink-50 rounded-md text-black p-6 gap-0'>
                 <div className="relative h-20 w-20 md:h-30 md:w-30 rounded-full shadow-lg mx-0">
                   <X className='absolute inset-0 text-black z-20 size-20 md:size-30'/>
                   <Image
@@ -239,17 +240,17 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
                   />
                 </div>
                 
-                <div className='col-span-2 flex flex-col justify-between px-4 py-2 md:py-4'>
-                  <div className='w-full border-b-[1px] border-dashed text-center md:text-left text-lg md:text-3xl italic font-semibold'>
+                <div className='col-span-2 flex flex-col justify-between px-4 py-2 md:py-4 '>
+                  <div className='w-full border-b-[1px] border-dashed text-center border-black md:text-left text-lg md:text-3xl italic font-semibold'>
                     FARININI
                   </div>
 
-                  <div className='w-full border-b-[1px] border-dashed'>
+                  <div className='w-full border-b-[1px] border-dashed border-black'>
                     {/* Second Line */}
                   </div>
                 </div>
               </div>
-              
+             
             </div>
 
             <div className="grid grid-cols-1 gap-8 ">
