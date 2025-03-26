@@ -273,14 +273,14 @@ const containerVariants = {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="bg-gray-50 p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300 flex gap-4"
+                className="bg-muted p-2 rounded-lg hover:bg-muted transition-colors duration-300 flex gap-4"
               >
                 <div className='flex flex-col justify-center h-auto p-2 bg-[#3064AC]/80 rounded-sm text-white'>
                   {index + 1}
                 </div>
                 <li>
                   <p className="font-semibold text-sm">{pub.authors}</p>
-                  <h2 className="font-bold text-gray-900 mt-2 text-sm italic">{pub.title}</h2>
+                  <h2 className="font-bold mt-2 text-sm italic">{pub.title}</h2>
                   <div className="mt-1 text-xs">
                     <span>{pub.journal}</span>
                     <span className="ml-2 text-[#3064AC]">DOI: {pub.doi}</span>
@@ -304,14 +304,14 @@ const containerVariants = {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="bg-gray-50 p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300 flex gap-4"
+                className="bg-muted p-2 rounded-lg hover:bg-mutedtransition-colors duration-300 flex gap-4"
               >
                 <div className='flex flex-col justify-center h-auto p-2 bg-[#3064AC]/80 rounded-sm text-white'>
                   {index + 1}
                 </div>
                 <li>
                   <p className="font-semibold text-sm">{conf.authors}</p>
-                  <h2 className="font-bold text-gray-900 mt-2 text-sm italic">{conf.title}</h2>
+                  <h2 className="font-bold mt-2 text-sm italic">{conf.title}</h2>
                   <div className="mt-1 text-xs">
                     <span>{conf.conference}</span>
                     <span className="ml-2 text-[#3064AC]">{conf.date}</span>
@@ -335,14 +335,14 @@ const containerVariants = {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="bg-gray-50 p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300 flex gap-4"
+                className="bg-muted p-2 rounded-lg hover:bg-muted transition-colors duration-300 flex gap-4"
               >
                 <div className='flex flex-col justify-center h-auto p-2 bg-[#3064AC]/80 rounded-sm text-white'>
                   {index + 1}
                 </div>
                 <li>
                   <p className="font-semibold text-sm">{book.authors}</p>
-                  <h2 className="font-bold text-gray-900 mt-2 text-sm italic">{book.title}</h2>
+                  <h2 className="font-bold mt-2 text-sm italic">{book.title}</h2>
                   <div className="mt-1 text-xs">
                     <span>{book.chapter}</span>
                     <span className="ml-2 text-[#3064AC]">{book.year} - {book.publisher}</span>
