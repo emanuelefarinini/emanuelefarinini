@@ -5,6 +5,7 @@ import { useRef } from 'react';
 import Image from 'next/image';
 import { Footer } from '@/components/footer';
 import DownloadPDF from '@/components/pdf';
+import { PublicationsList } from '@/components/pubblications';
 
 export default function Curriculum() {
   const contentRef = useRef(null);
@@ -148,35 +149,8 @@ export default function Curriculum() {
         
         <section className="mb-10">
           <h2 className="text-2xl font-bold mb-4 text-[#3064AC]">PUBBLICAZIONI</h2>
-          <div className='mb-4'>
-          <h4 className='text-lg font-semibold mb-4 border-b-[1px] border-dashed'>Libri</h4>
-            <li className='list-disc'> 
-              È autore del capitolo “Experimental Design” del libro “Basic Chemometrics for Analytical Chemists”, in corso di stampa da World Scientific Publishing.
-            </li>
-          </div>
 
-          <h4 className='text-lg font-semibold mb-4 border-b-[1px] border-dashed'>Articoli scientifici</h4>
-          <ol className="list-decimal pl-6 mb-6 space-y-3">
-            <li>Monteleone, L.; Speciale, A.; Valenti, G. E.; Leardi, R.; Farinini, E.; Traverso, N.; Ravera, S.; Garbarino, O.; Domenicotti, C (2021). &quot;PKCα Inhibition as a Strategy to Sensitize Neuroblastoma Stem Cells to Etoposide by Stimulating Ferroptosis&quot;. Antioxidants, 10(5), 691. DOI: 10.3390/antiox10050691</li>
-            <li>Marengo, B.; Pulliero, A.; Corrias, M. V.; Leardi, R.; Farinini, E.; Fronza, G.; Domenicotti, C. (2021). &quot;Potential Role of miRNAs in the Acquisition of Chemoresistance in Neuroblastoma&quot;. Journal of personalized medicine, 11(2), 107. DOI: 10.3390/jpm11020107.</li>
-            <li>Forni, F.; Farinini, E.; Leardi, R.; Rinaldo, A. (2021). &quot;Effects of visual training on motor performance in young tennis players using FitLight Trainer&quot;. The Journal of sports medicine and physical fitness. DOI: 10.23736/S0022-4707.21.12145-0</li>
-            <li>Turrini, F.; Farinini, E.; Leardi, R.; Grasso, F.; Orlandi, V.; Boggia, R. (2022). &quot;A Preliminary Color Study of Different Basil-Based Semi-Finished Products during Their Storage&quot;. Molecules 2022, 27(7), 2059. DOI: 10.3390/molecules27072059</li>
-            <li>Mara, A.; Deidda, S.; Caredda, M.; Ciulu, M.; Deroma, M.; Farinini, E.; Floris, I.; Langasco, I.; Leardi, R.; Pilo, M.I.; Spano, N.; Sanna, G. (2022). &quot;Multi-Elemental Analysis as a Tool to Ascertain the Safety and the Origin of Beehive Products: Development, Validation, and Application of an ICP-MS Method on Four Unifloral Honeys Produced in Sardinia, Italy&quot;. Molecules, 27(6). DOI: 10.3390/molecules27062009</li>
-            <li>Mameli, V.; Sanna Angotzi, M.; Farinini, E.; Leardi, R.; Lugliè, C.; Cannas, C. (2023). &quot;Intra-source provenance study on Monte Arci (Sardinia) obsidian by pXRF: Role of the data acquisition and analysis tools&quot;. Heliyon, vol. 9, no. 3. DOI: 10.1016/j.heliyon.2023.e13958</li>
-            <li>Garbarino, O.; Valenti, G. E.; Monteleone L.; Pietra, G.; Mingari, M. C.; Benzi, A.; Santina Bruzzone, S.; Ravera, S.; L., Leardi, R.; Farinini E.; Vernazza, S.; Grottoli, M.; Marengo, B.; Domenicotti, C. (2023). &quot;PLX4032 resistance of patient-derived melanoma cells: crucial role of oxidative metabolism&quot;. Front Oncol, vol. 13. DOI: 10.3389/fonc.2023.1210130</li>
-            <li>Garbarino, O.; Valenti, G. E.; Monteleone L.; Pietra, G.; Mingari, M. C.; Benzi, A.; Santina Bruzzone, S.; Ravera, S.; L., Leardi, R.; Farinini E.; Vernazza, S.; Grottoli, M.; Marengo, B.; Domenicotti, C. (2023). &quot;PLX4032 resistance of patient-derived melanoma cells: crucial role of oxidative metabolism&quot;. Front Oncol, vol. 13. DOI: 10.3389/fonc.2023.1210130</li>  
-          <li>Balbi, M.; Bonifacino, T.; Ravera, S.; Fenoglio, D.; Altosole, T.; Filaci, G.; Leardi, R.; Farinini, E.; Cerminara, M.; Puliti, A.; Milanese, M.; Bonanno, G. (2022). &quot;Partial deletion of mGluR5 affects microglia inflammatory phenotype, bioenergetic characteristics, and red-ox state during ALS progression in SOD1G93A mice.&quot; Federation of European Neuroscience Society (FENS) Forum Congress, Paris (FR), July 9-13.</li>  
-          <li>Venezia, E.; Ricci, M.; Salimi, P.; Farinini, E.; Zaccaria, R.P. (2021). &quot;Linking the performance of lithium-sulfur batteries to electrode composition and electrolyte formulation through mixture process design of experiments.&quot; The International Conference on Lithium-Sulfur Batteries (ICLSB), June 28 – July 1.</li>  
-          <li>Buccioli, M.; Farinini, E.; Leardi, R.; Moro, A.; Basso, A. (2022). &quot;Experimental Design: study of an industrial reductive amination reaction.&quot; XXII Congresso Nazionale Divisione Chimica Industriale, Catania (IT), November 7-8.</li>  
-          <li>Farinini, E.; Leardi, R.; Ascensão, G. (2023). &quot;Development of eco-efficient cements by a multi-step Experimental Design.&quot; PhD Day, Genova (IT), February 16.</li>  
-          <li>Minuto, F.; Farinini, E.; Leardi, R.; Solokha, P.; Basso, A. (2023). &quot;Study of a doubly photochemically activated Paternò-Büchi Reaction through Design of Experiments.&quot; XLVII “A. Corbella” International Summer School on Organic Synthesis (ISOS2023), Gargnano (IT), June 18-23.</li>  
-          <li>Farinini, E.; Leardi, R.; Ascensão, G. (2023). &quot;Development of eco-efficient cements by a multi-step Experimental Design.&quot; Colloquium Chemometricum Mediterraneum XI (CCMXI), Padova (IT), June 27-30.</li>  
-          <li>Cirignano, M.; Roshan, H.; Di Giacomo, A.; Piccinotti, D.; Fiorito, S.; Khabbazabkenar, S.; Farinini, E.; Leardi, R.; Prato, M.; Di Stasio, F.; Moreels, I. (2023). &quot;Blue-emitting CdSe/CdS core-crowned nanoplatelets: the power of Design of Experiments on optical performances and LED fabrication.&quot; 14th International Conference on Optical Probes of Organic and Hybrid Semiconductors (OP2023), Como (IT), September 10-15.</li>  
-          <li>Amata, C.; Panizzi, S.; Farinini, E.; Lavagna, L.; Pavese, M. (2024). &quot;Functionalized carbon nanomaterials in cement, a multivariate approach.&quot; European Conference on Composite Materials ECCM21, Nantes (FR), July 2-5.</li>  
-          <li>Coniglio, C.; Calvano, C. D.; Farinini, E.; Cataldi, T.R.I.; Patruno, A.; Carriglia, M.; Longobardi, F. (2024). &quot;Optimizing a sustainable approach: green extraction of anthocyanins from Apulian pigmented wheat landraces.&quot; XXVIII Congresso Nazionale della Società Chimica Italiana, Milano (IT), August 26-30.</li>  
-          <li>Buccioli, M.; Farinini, E.; Leardi, R.; Moro, A.; Maes, B.; Basso, A. (2024). &quot;From batch to flow chemistry: study of an industrial reductive amination reaction.&quot; Ischia Advanced School of Organic Chemistry 2024 - IASOC24, Ischia, September 19-23.</li>  
-
-        </ol>
+        <PublicationsList/>
         </section>
         </div>
         </div>
