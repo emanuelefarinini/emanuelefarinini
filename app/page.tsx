@@ -226,7 +226,7 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
             <h3 className="text-2xl font-bold mb-4">Come votarmi il 25-26 maggio</h3>
             <div className="gap-1 mb-4 inline-block">
               <span>
-                Nella scheda <span className="font-bold">rosa</span> (responsabile per l&apos;elezione del Presidente del Municipio e dei Consiglieri Municipali), crociare il simbolo della lista e specificare il mio nome come nell&apos;esempio! 🚀
+                Nella scheda <span className="font-bold">rosa</span> (responsabile per l&apos;elezione del Presidente del Municipio e dei Consiglieri Municipali), crociare il simbolo della lista e scrivere il mio cognome come nell&apos;esempio! 🚀
               </span>
             </div>
               <div className='grid grid-cols-3 md:grid-cols-4 h-auto w-full border-[6px] border-pink-400 bg-pink-50 rounded-md text-black p-6 gap-0'>
