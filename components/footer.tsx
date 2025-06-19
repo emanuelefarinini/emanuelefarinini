@@ -20,6 +20,11 @@ export function Footer() {
             className="w-full grid grid-cols-2 md:flex md:flex-row gap-2 justify-between items-start md:items-center"
           >
                 <span className='flex flex-col gap-2 text-sm'>© 2025 Farinini X Genova. <p>Tutti i diritti riservati.</p></span>
+                <div className='flex flex-row flex-wrap gap-1 text-sm '>
+                    <p className='inline-block '>
+                    Committente: Emanuele Farinini
+                    </p>
+                </div>
                 
                 <div className="hidden md:flex space-x-4">
                     <a href="https://www.linkedin.com/in/emanuele-farinini-609a0a147/" className="hover:text-gray-200 transition">
