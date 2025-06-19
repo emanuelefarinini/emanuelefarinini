@@ -1,6 +1,5 @@
 'use client'
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import { FaLinkedinIn } from "react-icons/fa6";
 import Image from 'next/image';
   const isProd = process.env.NODE_ENV === 'production';
