@@ -212,8 +212,8 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
                   </h2>
                   <h3 className="text-2xl font-medium text-[#3064AC] mb-4">Consulente Chemiometrico</h3>
                   <p className="text-lg mb-4">
-                    Mi occupo di consulenza nell'ambito chemiometrico dal 2019. Con un background sia accademico che pratico, 
-                    ho maturato una grande esperienza nell'analisi e risoluzione di problemi industriali che mi permette di affrontare qualsiasi difficoltà.
+                    Mi occupo di consulenza nell&apos;ambito chemiometrico dal 2019. Con un background sia accademico che pratico, 
+                    ho maturato una grande esperienza nell&apos;analisi e risoluzione di problemi industriali che mi permette di affrontare qualsiasi difficoltà.
                   </p>
                   <p className="text-lg mb-4">
                     Il mio approccio combina rigore scientifico con competenze strategiche per fornire soluzioni concrete 
