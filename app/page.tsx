@@ -51,7 +51,7 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
                   className='bg-[#3064AC] p-4 rounded-lg shadow-lg mb-6'
                 >
                   <p className='text-xl md:text-2xl font-medium text-white'>
-                    Trasformo dati complessi in soluzioni concrete per l'industria
+                    Trasformo dati complessi in soluzioni concrete per l&apos;industria
                   </p>
                 </motion.div>
               </div>
