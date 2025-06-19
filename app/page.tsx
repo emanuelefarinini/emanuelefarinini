@@ -5,10 +5,8 @@ import { motion } from 'framer-motion';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import Image from 'next/image';
-import { Phone, MapPin, Mail, X } from 'lucide-react';
+import { Phone, MapPin, Mail, BarChart3, Cog, GraduationCap } from 'lucide-react';
 import { toast } from "sonner"
-
-
 
 export default function Home() {
 
@@ -27,25 +25,25 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
             {/* Left side content */}
             <div className='w-full md:w-1/2 flex justify-end items-center z-10 px-6 md:px-12 py-12'>
               <div className="text-center md:text-left">
-                <div className='flex flex-row w-full gap-2 text-center bg-red md:text-left justify-center md:justify-start'>
+                <div className='flex flex-row w-full gap-2 text-center md:text-left justify-center md:justify-start'>
+                  <h1 className='text-3xl md:text-6xl font-bold mb-2'>
+                    Emanuele
+                  </h1>
+                  <h1 className='text-3xl md:text-6xl font-bold mb-2 text-[#3064AC]'>
+                    ·
+                  </h1>
                   <h1 className='text-3xl md:text-6xl font-bold mb-2'>
                     Farinini
                   </h1>
-                  <h1 className='text-3xl md:text-6xl font-bold mb-2 text-[#3064AC]'>
-                    X
-                  </h1>
-                  <h1 className='text-3xl md:text-6xl font-bold mb-2 '>
-                    Genova
-                  </h1>
                 </div>
-                <span className='flex flex-row flex-wrap justify-center md:justify-start gap-1 text-xl md:text-3xl font-base mb-6 text-muted-foreground'>
-                  <p className="w-full text-center md:text-left md:w-auto">Candidato lista civica Orgoglio Genova per i municipi:</p>
-                  <div className="flex flex-row justify-center md:justify-start gap-1 w-full md:w-auto">
-                    <p className='border-b-[1px] border-dashed mr-1 text-[#3064AC] border-[#3064AC]'>Medio Levante</p>
-                    <p>e</p>
-                    <p className='ml-1 text-[#3064AC] border-[#3064AC] border-b-[1px] border-dashed'>Centro Est</p>
+                <span className='flex flex-col gap-2 text-xl md:text-2xl font-base mb-6 text-muted-foreground'>
+                  <p className="w-full text-center md:text-left">Consulente Chemiometrico & Data Analyst</p>
+                  <div className="flex flex-row flex-wrap justify-center md:justify-start gap-1 text-lg">
+                    <p className='border-b-[1px] border-dashed mr-1 text-[#3064AC] border-[#3064AC]'>Experimental Design</p>
+                    <p>•</p>
+                    <p className='ml-1 text-[#3064AC] border-[#3064AC] border-b-[1px] border-dashed'>Analisi Multivariata</p>
                   </div>
-              </span>
+                </span>
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -53,7 +51,7 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
                   className='bg-[#3064AC] p-4 rounded-lg shadow-lg mb-6'
                 >
                   <p className='text-xl md:text-2xl font-medium text-white'>
-                    Innovazione e metodo, con passione: miglioriamo insieme la nostra città!
+                    Trasformo dati complessi in soluzioni concrete per l'industria
                   </p>
                 </motion.div>
               </div>
@@ -71,8 +69,8 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
                <div className="flex w-full h-full items-center">
                   <div className="relative h-72 w-72 md:h-160 md:w-160 ml-auto rounded-full overflow-hidden border-4 border-[#3064AC]">
                     <Image
-                      src={`${basePath}/Emanuele-Farinini.webp`} // Ensure correct path
-                      alt="Emanuele Farinini"
+                      src={`${basePath}/Emanuele-Farinini.webp`}
+                      alt="Emanuele Farinini - Consulente Chemiometrico"
                       fill
                       objectFit="cover"
                       className="rounded-full"
@@ -85,68 +83,81 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
           
           {/* Main Content */}
           <div className="max-w-6xl mx-auto px-6 py-16">
-            {/* Pillars Section */}
-            <h2 className="text-4xl font-bold mb-12 text-center">Le nostre priorità</h2>
+            {/* Services Section */}
+            <h2 className="text-4xl font-bold mb-12 text-center">I miei servizi</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              {/* Pillar 1 */}
+              {/* Service 1 */}
               <motion.div 
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className=" rounded-xl shadow-lg p-6 border-t-4 border-[#3064AC] hover:transform hover:scale-105 transition duration-300"
+                className="bg-white rounded-xl shadow-lg p-6 border-t-4 border-[#3064AC] hover:transform hover:scale-105 transition duration-300"
               >
-                <h3 className="text-2xl font-bold mb-4 text-[#3064AC]">1. Innovazione e metodo</h3>
-                <p className="text-lg mb-4">Per una gestione più efficiente del municipio</p>
-                <ul className="space-y-4">
+                <div className="flex items-center mb-4">
+                  <BarChart3 className="text-[#3064AC] mr-3" size={32} />
+                  <h3 className="text-2xl font-bold text-[#3064AC]">Analisi Chemiometrica</h3>
+                </div>
+                <p className="text-lg mb-4">Ottimizzazione processi e controllo qualità</p>
+                <ul className="space-y-3">
                   <li className="flex items-start">
-                    <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white flex items-center justify-center mr-3 mt-1">✓</div>
-                    <span className="text-lg"><strong>Potenziamento delle piattaforme digitali: </strong> Integrazione di strumenti di analisi dei dati territoriali per fornire aggiornamenti puntuali e interventi mirati, migliorando la comunicazione in tempo reale tra cittadini e Municipio.</span>
+                    <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white flex items-center justify-center mr-3 mt-1 text-sm">✓</div>
+                    <span className="text-base"><strong>Experimental Design:</strong> Progettazione sperimentale per ottimizzare processi industriali in ambito farmaceutico, alimentare e manifatturiero</span>
                   </li>
-                  
+                  <li className="flex items-start">
+                    <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white flex items-center justify-center mr-3 mt-1 text-sm">✓</div>
+                    <span className="text-base"><strong>Analisi Multivariata:</strong> Elaborazione statistica di dati complessi per identificare pattern e correlazioni</span>
+                  </li>
                 </ul>
               </motion.div>
               
-              {/* Pillar 2 */}
+              {/* Service 2 */}
               <motion.div 
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className=" rounded-xl shadow-lg p-6 border-t-4 border-[#3064AC] hover:transform hover:scale-105 transition duration-300"
+                className="bg-white rounded-xl shadow-lg p-6 border-t-4 border-[#3064AC] hover:transform hover:scale-105 transition duration-300"
               >
-                <h3 className="text-2xl font-bold mb-4 text-[#3064AC]">2.Sanità, Farmacia dei Servizi e Prevenzione</h3>
-                <ul className="space-y-4">
+                <div className="flex items-center mb-4">
+                  <Cog className="text-[#3064AC] mr-3" size={32} />
+                  <h3 className="text-2xl font-bold text-[#3064AC]">Consulenza Industriale</h3>
+                </div>
+                <p className="text-lg mb-4">Soluzioni personalizzate per l'industria</p>
+                <ul className="space-y-3">
                   <li className="flex items-start">
-                    <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white  flex items-center justify-center mr-3 mt-1">✓</div>
-                    <span className="text-lg"><strong> Farmacia dei servizi:</strong> Sviluppo di una rete integrata di farmacie capaci di offrire consulenze sanitarie, gestione delle terapie e supporto a domicilio, per facilitare l’accesso ai servizi di salute.</span>
+                    <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white flex items-center justify-center mr-3 mt-1 text-sm">✓</div>
+                    <span className="text-base"><strong>Process Monitoring:</strong> Monitoraggio multivariato di processi produttivi in tempo reale</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white flex items-center justify-center mr-3 mt-1">✓</div>
-                    <span className="text-lg"><strong>Campagne di prevenzione: </strong> Promozione di campagne di sensibilizzazione e prevenzione, con particolare attenzione alla popolazione anziana di Genova, per migliorare la qualità della vita e ridurre il carico sulle strutture ospedaliere.</span>
+                    <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white flex items-center justify-center mr-3 mt-1 text-sm">✓</div>
+                    <span className="text-base"><strong>Quality Control:</strong> Implementazione di sistemi di controllo qualità basati su tecniche chemiometriche avanzate</span>
                   </li>
                 </ul>
               </motion.div>
               
-              {/* Pillar 3 */}
+              {/* Service 3 */}
               <motion.div 
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
-                className=" rounded-xl shadow-lg p-6 border-t-4 border-[#3064AC] hover:transform hover:scale-105 transition duration-300"
+                className="bg-white rounded-xl shadow-lg p-6 border-t-4 border-[#3064AC] hover:transform hover:scale-105 transition duration-300"
               >
-                <h3 className="text-2xl font-bold mb-4 text-[#3064AC]">3. Lavoro, Sport, Benessere e Inclusione</h3>
-                <p className="text-lg mb-4">Per una comunità attiva e solidale</p>
-                <ul className="space-y-4">
+                <div className="flex items-center mb-4">
+                  <GraduationCap className="text-[#3064AC] mr-3" size={32} />
+                  <h3 className="text-2xl font-bold text-[#3064AC]">Formazione & Training</h3>
+                </div>
+                <p className="text-lg mb-4">Corsi specialistici e trasferimento competenze</p>
+                <ul className="space-y-3">
                   <li className="flex items-start">
-                    <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white  flex items-center justify-center mr-3 mt-1">✓</div>
-                    <span className="text-lg"><strong>Formazione e cultura del benessere:</strong> Collaborazioni con scuole e università per percorsi educativi su lavoro, scienza, sport e salute.</span>
+                    <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white flex items-center justify-center mr-3 mt-1 text-sm">✓</div>
+                    <span className="text-base"><strong>Corsi Aziendali:</strong> Formazione personalizzata su metodologie chemiometriche per team industriali</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white flex items-center justify-center mr-3 mt-1">✓</div>
-                    <span className="text-lg"><strong>Sport per tutti:</strong> Organizzazione di eventi e iniziative che promuovano lo sport come strumento di benessere, inclusione e socialità.</span>
+                    <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white flex items-center justify-center mr-3 mt-1 text-sm">✓</div>
+                    <span className="text-base"><strong>Software CAT:</strong> Sviluppo e supporto per il software chemiometrico gratuito disponibile su gruppochemiometria.it</span>
                   </li>
                 </ul>
               </motion.div>
@@ -159,36 +170,36 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
               viewport={{ once: true }}
               className="bg-[#3064AC] rounded-xl p-8 text-center shadow-xl"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white"> 📌 Due punti ancora da scrivere… con te!</h2>
-              <p className="text-xl mb-6 text-white"> 📢  La vostra voce conta! Il tuo contributo è importante.</p>
+              <h2 className="text-3xl font-bold mb-4 text-white">💡 Hai un problema analitico complesso?</h2>
+              <p className="text-xl mb-6 text-white">📊 Insieme possiamo trovare la soluzione ottimale utilizzando approcci data-driven</p>
               <div className="flex flex-col md:flex-row justify-center gap-4">
               <button 
                 className="bg-white hover:bg-gray-100 text-[#3064AC] py-3 px-8 rounded-full text-lg font-bold transition duration-300 shadow-lg"
                 onClick={() => {
-                  toast("Scrivimi🚀", {
-                    description: "Costruiamo insieme il futuro di Genova!",
+                  toast("Parliamone! 🚀", {
+                    description: "Discutiamo insieme il tuo progetto",
                     action: {
-                      label: "Esci",
-                      onClick: () => console.log("Esci"),
+                      label: "OK",
+                      onClick: () => console.log("OK"),
                     },
                   })
                 }
               }>
-                Scrivimi le tue idee e segnalazioni per migliorare il nostro territorio!<br/>
+                Contattami per una consulenza personalizzata
               </button>
               </div>
             </motion.div>
           </div>
           
-          {/* Candidate Bio */}
+          {/* Professional Bio */}
           <div className="bg-muted py-16">
             <div className="max-w-4xl mx-auto px-6">
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="w-full md:w-1/3">
                   <div className="relative h-64 w-64 mx-auto rounded-full overflow-hidden border-4 border-[#3064AC] shadow-lg">
                     <Image
-                      src={`${basePath}/Emanuele-Farinini.webp`} // Ensure correct path
-                      alt="Emanuele Farini"
+                      src={`${basePath}/Emanuele-Farinini.webp`}
+                      alt="Emanuele Farinini PhD"
                       layout="fill"
                       objectFit="cover"
                       className="rounded-full"
@@ -197,76 +208,89 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
                 </div>
                 <div className="w-full md:w-2/3 text-center md:text-left">
                   <h2 className="text-4xl font-bold mb-4">
-                    <a className='hover:underline' href={basePath + '/curriculum'}>Emanuele Farinini</a>
+                    <a className='hover:underline' href={basePath + '/curriculum'}>Emanuele Farinini, PhD</a>
                   </h2>
-                  <h3 className="text-2xl font-medium text-[#3064AC] mb-4">Candidato per aiutare Genova</h3>
+                  <h3 className="text-2xl font-medium text-[#3064AC] mb-4">Consulente Chemiometrico</h3>
                   <p className="text-lg mb-4">
-                    Mi occupo di consulenza nell&apos;ambito chemiometrico dal 2019. Con un background sia accademico che pratico, 
-                    ho maturato una grande esperienza nell&apos;analisi e risoluzione di problemi industriali che mi permette di affrontare qualsiasi difficoltà.
+                    Mi occupo di consulenza nell'ambito chemiometrico dal 2019. Con un background sia accademico che pratico, 
+                    ho maturato una grande esperienza nell'analisi e risoluzione di problemi industriali che mi permette di affrontare qualsiasi difficoltà.
                   </p>
                   <p className="text-lg mb-4">
-                    Il mio approccio combina ricerca analitica con competenze strategiche per fornire soluzioni concrete ai problemi della nostra comunità.
+                    Il mio approccio combina rigore scientifico con competenze strategiche per fornire soluzioni concrete 
+                    utilizzando Experimental Design e Analisi Multivariata in ambito farmaceutico, alimentare e manifatturiero.
                   </p>
                   <p className="text-lg mb-4">
-                    Il mio attaccamento alla città e la mia passione per il miglioramento continuo mi spingono a candidarmi per entrambi i municipi: Medio Levante e Centro Est.
+                    Collaboro con aziende leader internazionali come Ferrero, Lavazza, Chiesi, Bracco e molte altre, 
+                    offrendo consulenza specialistica e corsi di formazione personalizzati.
                   </p>
-                  <div className="flex flex-wrap gap-4 justify-center md:justify-start ">
-                    <span className="bg-[#3064AC] bg-opacity-10 text-white px-4 py-2 rounded-full text-sm font-medium w-2/3 md:w-auto">Analisi strategica</span>
-                    <span className="bg-[#3064AC] bg-opacity-10 text-white px-4 py-2 rounded-full text-sm font-medium w-2/3 md:w-auto">Risoluzione scientifica</span>
-                    <span className="bg-[#3064AC] bg-opacity-10 text-white px-4 py-2 rounded-full text-sm font-medium w-2/3 md:w-auto">Politiche concrete</span>
+                  <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <span className="bg-[#3064AC] bg-opacity-10 text-[#3064AC] px-4 py-2 rounded-full text-sm font-medium">Experimental Design</span>
+                    <span className="bg-[#3064AC] bg-opacity-10 text-[#3064AC] px-4 py-2 rounded-full text-sm font-medium">Analisi Multivariata</span>
+                    <span className="bg-[#3064AC] bg-opacity-10 text-[#3064AC] px-4 py-2 rounded-full text-sm font-medium">Process Optimization</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           
-          {/* Newsletter and Contact */}
+          {/* Clienti & Progetti */}
           <div className="max-w-4xl mx-auto px-6 py-16">
-            <div className="flex flex-col rounded-xl shadow-lg p-6 justify-center">
-            <h3 className="text-2xl font-bold mb-4">Come votarmi il 25-26 maggio</h3>
-            <div className="gap-1 mb-4 inline-block">
-              <span>
-                Nella scheda <span className="font-bold">rosa</span> (responsabile per l&apos;elezione del Presidente del Municipio e dei Consiglieri Municipali), crociare il simbolo della lista e scrivere il mio cognome come nell&apos;esempio! 🚀
-              </span>
-            </div>
-              <div className='grid grid-cols-3 md:grid-cols-4 h-auto w-full border-[6px] border-pink-400 bg-pink-50 rounded-md text-black p-6 gap-0'>
-                <div className="relative h-20 w-20 md:h-30 md:w-30 rounded-full shadow-lg mx-0">
-                  <X className='absolute inset-0 text-black z-20 size-20 md:size-30'/>
-                  <Image
-                    src={`${basePath}/Bucci-NM.png`}
-                    alt="Orgoglio Liguria"
-                    fill
-                    className="rounded-full object-fill"
-                  />
+            <div className="flex flex-col rounded-xl shadow-lg p-6 justify-center bg-white">
+              <h3 className="text-2xl font-bold mb-4">Clienti e Collaborazioni</h3>
+              <div className="gap-1 mb-4 inline-block">
+                <span>
+                  Ho collaborato con <span className="font-bold text-[#3064AC]">20+ aziende</span> leader nei settori farmaceutico, alimentare e manifatturiero, 
+                  fornendo consulenza specialistica e formazione in chemiometria
+                </span>
+              </div>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-6">
+                <div className="text-center p-4 border rounded-lg hover:shadow-md transition">
+                  <div className="font-bold text-[#3064AC] text-2xl">20+</div>
+                  <div className="text-sm text-gray-600">Aziende clienti</div>
                 </div>
-                
-                <div className='col-span-2 flex flex-col justify-between px-4 py-2 md:py-4 '>
-                  <div className='w-full border-b-[1px] border-dashed text-center border-black md:text-left text-lg md:text-3xl italic font-semibold'>
-                    FARININI
-                  </div>
-
-                  <div className='w-full border-b-[1px] border-dashed border-black'>
-                    {/* Second Line */}
-                  </div>
+                <div className="text-center p-4 border rounded-lg hover:shadow-md transition">
+                  <div className="font-bold text-[#3064AC] text-2xl">13</div>
+                  <div className="text-sm text-gray-600">Pubblicazioni scientifiche</div>
+                </div>
+                <div className="text-center p-4 border rounded-lg hover:shadow-md transition">
+                  <div className="font-bold text-[#3064AC] text-2xl">17</div>
+                  <div className="text-sm text-gray-600">Conferenze internazionali</div>
+                </div>
+                <div className="text-center p-4 border rounded-lg hover:shadow-md transition">
+                  <div className="font-bold text-[#3064AC] text-2xl">5+</div>
+                  <div className="text-sm text-gray-600">Anni di esperienza</div>
                 </div>
               </div>
-             
+
+              <div className="mt-8">
+                <h4 className="text-lg font-semibold mb-4 text-[#3064AC]">Alcuni dei miei clienti:</h4>
+                <div className="flex flex-wrap gap-3 text-sm">
+                  <span className="bg-gray-100 px-3 py-1 rounded-full">Ferrero</span>
+                  <span className="bg-gray-100 px-3 py-1 rounded-full">Lavazza</span>
+                  <span className="bg-gray-100 px-3 py-1 rounded-full">Chiesi Farmaceutici</span>
+                  <span className="bg-gray-100 px-3 py-1 rounded-full">Bracco</span>
+                  <span className="bg-gray-100 px-3 py-1 rounded-full">Olon S.p.A.</span>
+                  <span className="bg-gray-100 px-3 py-1 rounded-full">Mozarc Medical</span>
+                  <span className="bg-gray-100 px-3 py-1 rounded-full">J.M. Smucker (USA)</span>
+                  <span className="bg-gray-100 px-3 py-1 rounded-full">TFTAK Estonia</span>
+                </div>
+              </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-8 ">
-              
-              
-              <div className="flex flex-col rounded-xl shadow-lg p-6 justify-center">
+            <div className="grid grid-cols-1 gap-8 mt-8">
+              <div className="flex flex-col rounded-xl shadow-lg p-6 justify-center bg-white">
                 <h3 className="text-2xl font-bold mb-4">Contattami</h3>
-                <p className="text-lg mb-4">Hai domande o vuoi partecipare alla campagna? Scrivici!</p>
-                <div className="flex flex-col md:flex-row w-full justify-between gap-2">
+                <p className="text-lg mb-4">Hai un progetto o vuoi saperne di più sui miei servizi? Scrivimi!</p>
+                <div className="flex flex-col md:flex-row w-full justify-between gap-4">
                     <p className="flex items-center">
                       <span className="w-8 h-8 rounded-full bg-[#3064AC] flex items-center justify-center mr-3"><Mail className='text-white' size={16}/></span>
                       <a 
-                        href="mailto:farinixgenova@gmail.com?subject=Richiesta%20di%20Informazioni&body=Buongiorno%20Emanuele%2C%0A%0A
-                              Vorrei%20ricevere%20maggiori%20informazioni%20su%20[qui%20specifica%20di%20cosa%20si%20tratta].%0A%0A
+                        href="mailto:farininixgenova@gmail.com?subject=Richiesta%20Consulenza%20Chemiometrica&body=Buongiorno%20Emanuele%2C%0A%0A
+                              Vorrei%20ricevere%20maggiori%20informazioni%20sui%20suoi%20servizi%20di%20consulenza%20chemiometrica.%0A%0A
+                              Il%20mio%20progetto%20riguarda%3A%20[descrivi%20brevemente]%0A%0A
                               In%20attesa%20di%20una%20sua%20risposta%2C%20le%20porgo%20cordiali%20saluti.%0A%0A
-                              [Il%20tuo%20nome]"
+                              [Il%20tuo%20nome]%0A[La%20tua%20azienda]"
                         className="flex items-center hover:underline"
                       >
                         <span className="text-lg overflow-hidden text-ellipsis">farininixgenova@gmail.com</span>
@@ -274,11 +298,11 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
                     </p>
                     <p className="flex items-center">
                       <span className="w-8 h-8 rounded-full bg-[#3064AC] flex items-center justify-center mr-3"><Phone className='text-white' size={16}/></span>
-                      <span className="text-lg">+39... Scrivimi per mail!</span>
+                      <span className="text-lg">Contatti telefonici via email</span>
                     </p>
                     <p className="flex items-center mr-4">
                       <span className="w-8 h-8 rounded-full bg-[#3064AC] flex items-center justify-center mr-3"><MapPin className='text-white' size={16}/></span>
-                      <span className="text-lg">Genova</span>
+                      <span className="text-lg">Genova, Italia</span>
                     </p>
                   </div>
                 </div>
@@ -290,5 +314,3 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
     </>
   )
 }
-
-
