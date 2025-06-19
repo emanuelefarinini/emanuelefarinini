@@ -72,7 +72,7 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
                       src={`${basePath}/Emanuele-Farinini.webp`}
                       alt="Emanuele Farinini - Consulente Chemiometrico"
                       fill
-                      objectFit="cover"
+                      style={{objectFit: 'cover'}}
                       className="rounded-full"
                     />
                   </div>
@@ -124,7 +124,7 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
                   <Cog className="text-[#3064AC] mr-3" size={32} />
                   <h3 className="text-2xl font-bold text-[#3064AC]">Consulenza Industriale</h3>
                 </div>
-                <p className="text-lg mb-4">Soluzioni personalizzate per l'industria</p>
+                <p className="text-lg mb-4">Soluzioni personalizzate per l&apos;industria</p>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white flex items-center justify-center mr-3 mt-1 text-sm">✓</div>
@@ -200,8 +200,8 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
                     <Image
                       src={`${basePath}/Emanuele-Farinini.webp`}
                       alt="Emanuele Farinini PhD"
-                      layout="fill"
-                      objectFit="cover"
+                      fill
+                      style={{objectFit: 'cover'}}
                       className="rounded-full"
                     />
                   </div>
@@ -286,11 +286,7 @@ const basePath = isProd ? '/emanuelefarinini/' : '';
                     <p className="flex items-center">
                       <span className="w-8 h-8 rounded-full bg-[#3064AC] flex items-center justify-center mr-3"><Mail className='text-white' size={16}/></span>
                       <a 
-                        href="mailto:farininixgenova@gmail.com?subject=Richiesta%20Consulenza%20Chemiometrica&body=Buongiorno%20Emanuele%2C%0A%0A
-                              Vorrei%20ricevere%20maggiori%20informazioni%20sui%20suoi%20servizi%20di%20consulenza%20chemiometrica.%0A%0A
-                              Il%20mio%20progetto%20riguarda%3A%20[descrivi%20brevemente]%0A%0A
-                              In%20attesa%20di%20una%20sua%20risposta%2C%20le%20porgo%20cordiali%20saluti.%0A%0A
-                              [Il%20tuo%20nome]%0A[La%20tua%20azienda]"
+                        href="mailto:farininixgenova@gmail.com?subject=Richiesta%20Consulenza%20Chemiometrica&body=Buongiorno%20Emanuele%2C%0A%0AVorrei%20ricevere%20maggiori%20informazioni%20sui%20suoi%20servizi%20di%20consulenza%20chemiometrica.%0A%0AIl%20mio%20progetto%20riguarda%3A%20[descrivi%20brevemente]%0A%0AIn%20attesa%20di%20una%20sua%20risposta%2C%20le%20porgo%20cordiali%20saluti.%0A%0A[Il%20tuo%20nome]%0A[La%20tua%20azienda]"
                         className="flex items-center hover:underline"
                       >
                         <span className="text-lg overflow-hidden text-ellipsis">farininixgenova@gmail.com</span>
