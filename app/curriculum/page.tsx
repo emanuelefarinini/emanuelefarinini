@@ -1,160 +1,316 @@
 'use client'
 
+import { Loading } from '@/components/loading-component';
+import { motion } from 'framer-motion';
 import { Navbar } from '@/components/navbar';
-import { useRef } from 'react';
-import Image from 'next/image';
 import { Footer } from '@/components/footer';
-import DownloadPDF from '@/components/pdf';
-import { PublicationsList } from '@/components/pubblications';
+import Image from 'next/image';
+import { Phone, MapPin, Mail, X, BarChart3, Cog, GraduationCap } from 'lucide-react';
+import { toast } from "sonner"
 
-export default function Curriculum() {
-  const contentRef = useRef(null);
-  const isProd = process.env.NODE_ENV === 'production';
-  const basePath = isProd ? '/emanuelefarinini/' : '';
+export default function Home() {
 
+const isProd = process.env.NODE_ENV === 'production';
+const basePath = isProd ? '/emanuelefarinini/' : '';
 
   return (
     <>
-    <div className="bg-background min-h-screen">
-      <Navbar />
-      
-      <div className="container mx-auto px-4  max-w-5xl" ref={contentRef}>
-      <header className="flex flex-col md:flex-row justify-between items-center border-b border-gray-300 py-6 mb-8 gap-4 h-full">
-        <div className='h-full'>
-          <h1 className="text-4xl font-bold mb-2 text-[#3064AC] ">CURRICULUM VITAE</h1>
-          <h2 className="text-2xl font-semibold mb-4">EMANUELE FARININI, PhD</h2>
-          <p className="text-lg mb-2 flex flex-col gap-1 text-muted-foreground">
-          <a 
-            href="mailto:farinixgenova@gmail.com?subject=Richiesta%20di%20Informazioni&body=Buongiorno%20Emanuele%2C%0A%0A
-                  Vorrei%20ricevere%20maggiori%20informazioni%20su%20[qui%20specifica%20di%20cosa%20si%20tratta].%0A%0A
-                  In%20attesa%20di%20una%20sua%20risposta%2C%20le%20porgo%20cordiali%20saluti.%0A%0A
-                  [Il%20tuo%20nome]"
-            className="flex items-center hover:underline"
-          >
-            <span className="text-lg">farininixgenova@gmail.com</span>
-          </a>
-          </p>
-          <div className='hidden md:flex flex-row gap-2 items-start mt-auto'>
-            <DownloadPDF />
-          </div>
-        </div>
+        <Loading />
+        <div className='relative min-h-screen bg-background'>
+          <Navbar />
           
-          <div className="w-full md:w-1/3">
-            <div className="relative h-64 w-64 mx-auto rounded-full overflow-hidden border-4 border-[#3064AC] shadow-lg">
-              <Image
-                src={`${basePath}/Emanuele-Farinini.webp`} // Ensure correct path
-                alt="Emanuele Farini"
-                fill
-                objectFit="cover"
-                className="rounded-full"
-              />
+          {/* Hero Section */}
+          <div className='w-full h-screen flex flex-col md:flex-row items-center relative overflow-hidden'>
+            
+            {/* Left side content */}
+            <div className='w-full md:w-1/2 flex justify-end items-center z-10 px-6 md:px-12 py-12'>
+              <div className="text-center md:text-left">
+                <div className='flex flex-row w-full gap-2 text-center md:text-left justify-center md:justify-start'>
+                  <h1 className='text-3xl md:text-6xl font-bold mb-2'>
+                    Emanuele
+                  </h1>
+                  <h1 className='text-3xl md:text-6xl font-bold mb-2 text-[#3064AC]'>
+                    ·
+                  </h1>
+                  <h1 className='text-3xl md:text-6xl font-bold mb-2'>
+                    Farinini
+                  </h1>
+                </div>
+                <span className='flex flex-col gap-2 text-xl md:text-2xl font-base mb-6 text-muted-foreground'>
+                  <p className="w-full text-center md:text-left">Consulente Chemiometrico & Data Analyst</p>
+                  <div className="flex flex-row flex-wrap justify-center md:justify-start gap-1 text-lg">
+                    <p className='border-b-[1px] border-dashed mr-1 text-[#3064AC] border-[#3064AC]'>Experimental Design</p>
+                    <p>•</p>
+                    <p className='ml-1 text-[#3064AC] border-[#3064AC] border-b-[1px] border-dashed'>Analisi Multivariata</p>
+                  </div>
+                </span>
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className='bg-[#3064AC] p-4 rounded-lg shadow-lg mb-6'
+                >
+                  <p className='text-xl md:text-2xl font-medium text-white'>
+                    Trasformo dati complessi in soluzioni concrete per l'industria
+                  </p>
+                </motion.div>
+              </div>
+            </div>
+              
+            {/* Right side with image */}
+            <div className='relative w-full md:w-1/2 h-full flex items-center justify-center'>
+              <motion.div
+                initial={{ opacity: 0, scale:0 }}
+                animate={{ opacity: 1, scale:1, }}
+                transition={{ delay: 5, duration:1 }}
+                viewport={{ once: true }}
+                className='relative h-full md:h-4/5 md:w-4/5'
+              >
+               <div className="flex w-full h-full items-center">
+                  <div className="relative h-72 w-72 md:h-160 md:w-160 ml-auto rounded-full overflow-hidden border-4 border-[#3064AC]">
+                    <Image
+                      src={`${basePath}/Emanuele-Farinini.webp`}
+                      alt="Emanuele Farinini - Consulente Chemiometrico"
+                      fill
+                      objectFit="cover"
+                      className="rounded-full"
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+          
+          {/* Main Content */}
+          <div className="max-w-6xl mx-auto px-6 py-16">
+            {/* Services Section */}
+            <h2 className="text-4xl font-bold mb-12 text-center">I miei servizi</h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              {/* Service 1 */}
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="bg-white rounded-xl shadow-lg p-6 border-t-4 border-[#3064AC] hover:transform hover:scale-105 transition duration-300"
+              >
+                <div className="flex items-center mb-4">
+                  <BarChart3 className="text-[#3064AC] mr-3" size={32} />
+                  <h3 className="text-2xl font-bold text-[#3064AC]">Analisi Chemiometrica</h3>
+                </div>
+                <p className="text-lg mb-4">Ottimizzazione processi e controllo qualità</p>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white flex items-center justify-center mr-3 mt-1 text-sm">✓</div>
+                    <span className="text-base"><strong>Experimental Design:</strong> Progettazione sperimentale per ottimizzare processi industriali in ambito farmaceutico, alimentare e manifatturiero</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white flex items-center justify-center mr-3 mt-1 text-sm">✓</div>
+                    <span className="text-base"><strong>Analisi Multivariata:</strong> Elaborazione statistica di dati complessi per identificare pattern e correlazioni</span>
+                  </li>
+                </ul>
+              </motion.div>
+              
+              {/* Service 2 */}
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="bg-white rounded-xl shadow-lg p-6 border-t-4 border-[#3064AC] hover:transform hover:scale-105 transition duration-300"
+              >
+                <div className="flex items-center mb-4">
+                  <Cog className="text-[#3064AC] mr-3" size={32} />
+                  <h3 className="text-2xl font-bold text-[#3064AC]">Consulenza Industriale</h3>
+                </div>
+                <p className="text-lg mb-4">Soluzioni personalizzate per l'industria</p>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white flex items-center justify-center mr-3 mt-1 text-sm">✓</div>
+                    <span className="text-base"><strong>Process Monitoring:</strong> Monitoraggio multivariato di processi produttivi in tempo reale</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white flex items-center justify-center mr-3 mt-1 text-sm">✓</div>
+                    <span className="text-base"><strong>Quality Control:</strong> Implementazione di sistemi di controllo qualità basati su tecniche chemiometriche avanzate</span>
+                  </li>
+                </ul>
+              </motion.div>
+              
+              {/* Service 3 */}
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="bg-white rounded-xl shadow-lg p-6 border-t-4 border-[#3064AC] hover:transform hover:scale-105 transition duration-300"
+              >
+                <div className="flex items-center mb-4">
+                  <GraduationCap className="text-[#3064AC] mr-3" size={32} />
+                  <h3 className="text-2xl font-bold text-[#3064AC]">Formazione & Training</h3>
+                </div>
+                <p className="text-lg mb-4">Corsi specialistici e trasferimento competenze</p>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white flex items-center justify-center mr-3 mt-1 text-sm">✓</div>
+                    <span className="text-base"><strong>Corsi Aziendali:</strong> Formazione personalizzata su metodologie chemiometriche per team industriali</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="min-w-6 h-6 rounded-full bg-[#3064AC] text-white flex items-center justify-center mr-3 mt-1 text-sm">✓</div>
+                    <span className="text-base"><strong>Software CAT:</strong> Sviluppo e supporto per il software chemiometrico gratuito disponibile su gruppochemiometria.it</span>
+                  </li>
+                </ul>
+              </motion.div>
+            </div>
+            
+            {/* Call to Action */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-[#3064AC] rounded-xl p-8 text-center shadow-xl"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">💡 Hai un problema analitico complesso?</h2>
+              <p className="text-xl mb-6 text-white">📊 Insieme possiamo trovare la soluzione ottimale utilizzando approcci data-driven</p>
+              <div className="flex flex-col md:flex-row justify-center gap-4">
+              <button 
+                className="bg-white hover:bg-gray-100 text-[#3064AC] py-3 px-8 rounded-full text-lg font-bold transition duration-300 shadow-lg"
+                onClick={() => {
+                  toast("Parliamone! 🚀", {
+                    description: "Discutiamo insieme il tuo progetto",
+                    action: {
+                      label: "OK",
+                      onClick: () => console.log("OK"),
+                    },
+                  })
+                }
+              }>
+                Contattami per una consulenza personalizzata
+              </button>
+              </div>
+            </motion.div>
+          </div>
+          
+          {/* Professional Bio */}
+          <div className="bg-muted py-16">
+            <div className="max-w-4xl mx-auto px-6">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="w-full md:w-1/3">
+                  <div className="relative h-64 w-64 mx-auto rounded-full overflow-hidden border-4 border-[#3064AC] shadow-lg">
+                    <Image
+                      src={`${basePath}/Emanuele-Farinini.webp`}
+                      alt="Emanuele Farinini PhD"
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-full"
+                    />
+                  </div>
+                </div>
+                <div className="w-full md:w-2/3 text-center md:text-left">
+                  <h2 className="text-4xl font-bold mb-4">
+                    <a className='hover:underline' href={basePath + '/curriculum'}>Emanuele Farinini, PhD</a>
+                  </h2>
+                  <h3 className="text-2xl font-medium text-[#3064AC] mb-4">Consulente Chemiometrico</h3>
+                  <p className="text-lg mb-4">
+                    Mi occupo di consulenza nell&apos;ambito chemiometrico dal 2019. Con un background sia accademico che pratico, 
+                    ho maturato una grande esperienza nell&apos;analisi e risoluzione di problemi industriali che mi permette di affrontare qualsiasi difficoltà.
+                  </p>
+                  <p className="text-lg mb-4">
+                    Il mio approccio combina rigore scientifico con competenze strategiche per fornire soluzioni concrete 
+                    utilizzando Experimental Design e Analisi Multivariata in ambito farmaceutico, alimentare e manifatturiero.
+                  </p>
+                  <p className="text-lg mb-4">
+                    Collaboro con aziende leader internazionali come Ferrero, Lavazza, Chiesi, Bracco e molte altre, 
+                    offrendo consulenza specialistica e corsi di formazione personalizzati.
+                  </p>
+                  <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <span className="bg-[#3064AC] bg-opacity-10 text-[#3064AC] px-4 py-2 rounded-full text-sm font-medium">Experimental Design</span>
+                    <span className="bg-[#3064AC] bg-opacity-10 text-[#3064AC] px-4 py-2 rounded-full text-sm font-medium">Analisi Multivariata</span>
+                    <span className="bg-[#3064AC] bg-opacity-10 text-[#3064AC] px-4 py-2 rounded-full text-sm font-medium">Process Optimization</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Clienti & Progetti */}
+          <div className="max-w-4xl mx-auto px-6 py-16">
+            <div className="flex flex-col rounded-xl shadow-lg p-6 justify-center bg-white">
+              <h3 className="text-2xl font-bold mb-4">Clienti e Collaborazioni</h3>
+              <div className="gap-1 mb-4 inline-block">
+                <span>
+                  Ho collaborato con <span className="font-bold text-[#3064AC]">20+ aziende</span> leader nei settori farmaceutico, alimentare e manifatturiero, 
+                  fornendo consulenza specialistica e formazione in chemiometria
+                </span>
+              </div>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-6">
+                <div className="text-center p-4 border rounded-lg hover:shadow-md transition">
+                  <div className="font-bold text-[#3064AC] text-2xl">20+</div>
+                  <div className="text-sm text-gray-600">Aziende clienti</div>
+                </div>
+                <div className="text-center p-4 border rounded-lg hover:shadow-md transition">
+                  <div className="font-bold text-[#3064AC] text-2xl">13</div>
+                  <div className="text-sm text-gray-600">Pubblicazioni scientifiche</div>
+                </div>
+                <div className="text-center p-4 border rounded-lg hover:shadow-md transition">
+                  <div className="font-bold text-[#3064AC] text-2xl">17</div>
+                  <div className="text-sm text-gray-600">Conferenze internazionali</div>
+                </div>
+                <div className="text-center p-4 border rounded-lg hover:shadow-md transition">
+                  <div className="font-bold text-[#3064AC] text-2xl">5+</div>
+                  <div className="text-sm text-gray-600">Anni di esperienza</div>
+                </div>
+              </div>
+
+              <div className="mt-8">
+                <h4 className="text-lg font-semibold mb-4 text-[#3064AC]">Alcuni dei miei clienti:</h4>
+                <div className="flex flex-wrap gap-3 text-sm">
+                  <span className="bg-gray-100 px-3 py-1 rounded-full">Ferrero</span>
+                  <span className="bg-gray-100 px-3 py-1 rounded-full">Lavazza</span>
+                  <span className="bg-gray-100 px-3 py-1 rounded-full">Chiesi Farmaceutici</span>
+                  <span className="bg-gray-100 px-3 py-1 rounded-full">Bracco</span>
+                  <span className="bg-gray-100 px-3 py-1 rounded-full">Olon S.p.A.</span>
+                  <span className="bg-gray-100 px-3 py-1 rounded-full">Mozarc Medical</span>
+                  <span className="bg-gray-100 px-3 py-1 rounded-full">J.M. Smucker (USA)</span>
+                  <span className="bg-gray-100 px-3 py-1 rounded-full">TFTAK Estonia</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 gap-8 mt-8">
+              <div className="flex flex-col rounded-xl shadow-lg p-6 justify-center bg-white">
+                <h3 className="text-2xl font-bold mb-4">Contattami</h3>
+                <p className="text-lg mb-4">Hai un progetto o vuoi saperne di più sui miei servizi? Scrivimi!</p>
+                <div className="flex flex-col md:flex-row w-full justify-between gap-4">
+                    <p className="flex items-center">
+                      <span className="w-8 h-8 rounded-full bg-[#3064AC] flex items-center justify-center mr-3"><Mail className='text-white' size={16}/></span>
+                      <a 
+                        href="mailto:farininixgenova@gmail.com?subject=Richiesta%20Consulenza%20Chemiometrica&body=Buongiorno%20Emanuele%2C%0A%0A
+                              Vorrei%20ricevere%20maggiori%20informazioni%20sui%20suoi%20servizi%20di%20consulenza%20chemiometrica.%0A%0A
+                              Il%20mio%20progetto%20riguarda%3A%20[descrivi%20brevemente]%0A%0A
+                              In%20attesa%20di%20una%20sua%20risposta%2C%20le%20porgo%20cordiali%20saluti.%0A%0A
+                              [Il%20tuo%20nome]%0A[La%20tua%20azienda]"
+                        className="flex items-center hover:underline"
+                      >
+                        <span className="text-lg overflow-hidden text-ellipsis">farininixgenova@gmail.com</span>
+                      </a>
+                    </p>
+                    <p className="flex items-center">
+                      <span className="w-8 h-8 rounded-full bg-[#3064AC] flex items-center justify-center mr-3"><Phone className='text-white' size={16}/></span>
+                      <span className="text-lg">Contatti telefonici via email</span>
+                    </p>
+                    <p className="flex items-center mr-4">
+                      <span className="w-8 h-8 rounded-full bg-[#3064AC] flex items-center justify-center mr-3"><MapPin className='text-white' size={16}/></span>
+                      <span className="text-lg">Genova, Italia</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className='md:hidden w-full flex flex-row gap-2 justify-center mt-auto'>
-            <DownloadPDF />
-          </div>
-        </header>
-
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-4 text-[#3064AC]">IN POCHE PAROLE</h2>
-          <h2 className="text-md font-bold mb-2">Approccio Multivariato per la risoluzione dei problemi</h2>
-          <p className="mb-6">
-          Specializzato nell&apos;uso dell&apos;Experimental Design e dell&apos;Analisi Multivariata per l&apos;ottimizzazione di processi, il monitoraggio e il controllo qualità in ambito farmaceutico, alimentare e manifatturiero.
-          </p>
-          <h2 className="text-md font-bold mb-2 ">Ricerca e Collaborazioni Internazionali</h2>
-          <p className="mb-6">
-          Esperienza accademica e industriale con pubblicazioni su riviste di alto impatto e collaborazioni con aziende e centri di ricerca leader a livello internazionale.
-          </p>
-          <h2 className="text-md font-bold mb-2">Didattica e Divulgazione</h2>
-          <p className="mb-6">
-          Docente in corsi universitari e scuole di chemiometria, autore di contenuti educativi (capitolo di libro, software open-source, canale YouTube), con un forte impegno nella diffusione delle metodologie chemiometriche.
-          </p>
-          <h2 className="text-md font-bold mb-2"> Passione per lo sport</h2>
-          <p className="mb-6">
-          Canottiere presso il Rowing Club Genovese 1890, velista presso la Lega Navale Italiana, sezione Genova Centro.
-          </p>
-
-
-        </section >
-
-        <section className="mb-10">
-        <h2 className="text-2xl font-bold mb-4 text-[#3064AC]">BIOGRAFIA</h2>
-          <p className="mb-4">
-            Emanuele Farinini è nato a Genova (Italia) il 31 ottobre 1994.
-          </p>
-          <p className="mb-4">
-            A luglio 2018 si è laureato in Farmacia e Farmacia Industriale presso il Dipartimento di Farmacia dell&apos;Università di Genova (110/110); Tesi sperimentale: &quot;Estrazione innovativa del licopene e valutazione biologica dell&apos;estratto&quot; svolta in collaborazione con diversi dipartimenti (DIFAR, DICCA, DISC dell&apos;Università di Genova) con pubblicazione su ChERD (Chemical Engineering Research and Design, rivista internazionale principale in ingegneria chimica) e brevetto del processo di estrazione (Design and Solid-Liquid multiVariable Extractor - SoLVE, numero di brevetto WO2021090250A1). Ha partecipato anche come rappresentante degli studenti e membro del Comitato Direttivo del Dipartimento di Farmacia e Chimica e Tecnologia Farmaceutiche. Attualmente iscritto all&apos;Ordine dei Farmacisti della Provincia di Genova.
-          </p>
-          <p className="mb-4">
-            A marzo 2024 ha conseguito il Dottorato di Ricerca in Scienze e Tecnologie della Chimica e dei Materiali, con specializzazione in Scienze Farmaceutiche, Cosmetiche e Alimentari presso il Dipartimento di Chimica e Chimica Industriale (DCCI) dell&apos;Università di Genova e l&apos;Istituto Italiano di Tecnologia (IIT); Tesi di dottorato: &quot;Uso dell&apos;Experimental Design e dell&apos;Analisi Multivariata per la risoluzione di problemi industriali&quot; (link alla tesi). Ha condotto la sua ricerca nel Gruppo di Ricerca di Chimica Analitica e Chemiometria, collaborando con industrie manifatturiere e gruppi di ricerca internazionali.
-          </p>
-          <p className="mb-4">
-            Da agosto 2018 a dicembre 2019 ha lavorato come scienziato R&D nello Early Product Development (EPD) e Chemical Manufacturing and Control (CMC) presso Chiesi Limited UK, situato a Chippenham, Wiltshire, UK. Successivamente ha iniziato una carriera professionale come consulente chemiometra in collaborazione con il Professor Riccardo Leardi, un ruolo che continua a ricoprire. La sua ricerca e consulenza si concentrano sulla risoluzione di problemi industriali utilizzando tecniche chemiometriche. Queste tecniche includono Experimental Design, ottimizzazione di processi, monitoraggio multivariato di processi e controllo qualità multivariato.
-          </p>
-          <p className="mb-4">
-            Il suo principale interesse è l&apos;approccio multivariato alla risoluzione di problematiche industriali, dalla scelta della strategia ottimale nella pianificazione sperimentale alla calibrazione, sfruttando tutte le fonti di informazione nei processi di produzione. Inoltre, sta sviluppando il software chemiometrico CAT, disponibile gratuitamente sul sito gruppochemiometria.it. Per facilitarne l&apos;utilizzo e promuovere la diffusione della chemiometria, gestisce un canale YouTube con tutorial e demo, disponibile all&apos;indirizzo YouTube.
-          </p>
-          <p className="mb-4">
-            È co-autore di 13 articoli scientifici e 17 comunicazioni in congressi nazionali e internazionali. In collaborazione con il Professor Riccardo Leardi, ha tenuto conferenze e corsi in diverse industrie e centri di ricerca: Biofer S.p.A., Bracco, Cambrex Profarmaco Milano SRL, Center of Food and Fermentation Technologies (TFTAK) Tallinn, Centro Sportivo Remiero di Sabaudia - Marina Militare, Chiesi Farmaceutici, Ferrero, Istituto Italiano di Tecnologia (IIT), Innovhub, Istituto Zooprofilattico Sperimentale, Mozarc Medical, Merck Serono, Lavazza, Olon S.p.A, Procos S.p.A, Roquette Italia S.p.A., Università di Genova, Università di Modena, Università della Basilicata.
-          </p>
-          <p className="mb-4">
-            È docente alla Scuola &quot;Chemometric Tools for Process Monitoring&quot; presso l&apos;Università di Modena dal 2024. Attualmente tiene un corso di dottorato in Medicina Sperimentale (DiMes) dal titolo &quot;Experimental Design e analisi multivariata&quot; presso l&apos;Università di Genova. Ha insegnato alle due scuole di Chemiometria (Analisi Multivariata; Experimental Design), entrambe tenute due volte l&apos;anno presso l&apos;Università di Genova (2020-2023).
-          </p>
-          <p className="mb-4">
-            È revisore per la rivista Chemometrics and Intelligent Laboratory Systems (CHEMOLAB).
-          </p>
-          <p className="mb-4">
-            È un atleta pluripremiato (due Medaglie di Bronzo CONI per il Valore Atletico), nono ai Campionati Mondiali di Coastal Rowing assoluti (2024), cinque volte Campione Italiano di Canottaggio categorie Senior, Universitari, Esordienti (2015-2021).
-          </p>
-          <p className="mb-4">
-            È anche appassionato nell&apos;applicare le sue competenze professionali alle passioni personali, che spaziano dallo sport all&apos;ottimizzazione delle ricette culinarie. Ha collaborato con Francesco Cattaneo, direttore tecnico capo della Federazione Italiana Canottaggio, per migliorare le prestazioni degli atleti olimpici italiani in preparazione per Tokyo 2020. Inoltre, ha ottimizzato la ricetta tradizionale di pesto con pestello e mortaio attraverso lo studio dei rapporti degli ingredienti mediante Mixture Design, diventando finalista al &apos;IX Genova Pesto World Championship&apos; e competendo tra 100 semifinalisti provenienti da tutto il mondo (2021). La sua analisi statistica dei dati storici di tutte le edizioni del campionato mondiale è stata presentata a Palazzo della Regione Liguria (Genova), in collaborazione con Ben Thuriaux-Alemán, partner di Arthur D. Little (2024).
-          </p>
-          <p className='mb-4'>
-            È autore del capitolo “Experimental Design” del libro “Basic Chemometrics for Analytical Chemists”, in corso di stampa da World Scientific Publishing.
-          </p>
-          <p className="mb-4">
-            Parla fluentemente le seguenti lingue: italiano, inglese; conoscenza di base: tedesco.
-          </p>
-        </section>
-        
-        <section className="mb-10">
-          <h2 className="text-2xl font-bold mb-4 text-[#3064AC]">CONSULENZE</h2>
-          <p className="mb-4">
-            Dal 2020 ha iniziato la sua attività di consulenza chemiometrica in collaborazione con il Professor Riccardo Leardi. Si elencano i loro clienti:
-          </p>
-          <ul className="list-disc pl-6 mb-6 space-y-2">
-            <li>Agras Delic (Italia): applicazione dell&apos;analisi multivariata ai prodotti di pet food;</li>
-            <li>Biofer S.p.A. (Italia): corso di chemiometria, applicazione dell&apos;Experimental Design per l&apos;ottimizzazione e il monitoraggio dei processi;</li>
-            <li>Bracco (Italia): corso di chemiometria;</li>
-            <li>Cambrex Profarmaco (Italia): corso di chemiometria, applicazione dell&apos;Experimental Design e dell&apos;analisi multivariata ai prodotti farmaceutici, monitoraggio dei processi mediante sonda NIR;</li>
-            <li>Center of Food and Fermentation Technologies (TFTAK) Tallinn (Estonia): corso di Experimental Design;</li>
-            <li>Chiesi Farmaceutici (Italia): corso di chemiometria, applicazione dell&apos;Experimental Design e dell&apos;analisi multivariata al reparto Chemical Manufacturing and Control (CMC);</li>
-            <li>Federazione Italiana di Canottaggio – FIC (Italia): monitoraggio multivariato dei dati di telemetria del quattro di coppia maschile olimpico e dell&apos;otto maschile, finalizzato al miglioramento delle prestazioni degli atleti olimpici italiani di canottaggio in preparazione per Tokyo 2020;</li>
-            <li>Ferrero (Italia): corso di chemiometria, monitoraggio di processo ed Experimental Design applicato a numerosi prodotti dolciari industriali con siti di produzione da diverse parti del mondo;</li>
-            <li>Fileni (Italia): analisi multivariata sui dati dell&apos;intera filiera dell&apos;industria avicola;</li>
-            <li>HA Italia: corso di chemiometria, applicazione dell&apos;Experimental Design e dell&apos;analisi multivariata ai prodotti per fonderie;</li>
-            <li>Innovhub (Italia): corso di chemiometria e consulenza su prodotti alimentari dell&apos;industria olearia;</li>
-            <li>Istituto Italiano di Tecnologia - IIT (Italia): corso di chemiometria;</li>
-            <li>J. M. Smucker (USA): calibrazione multivariata, data-fusion e SOPLS, N-way PCA e analisi dei dati sensoriali di caffè;</li>
-            <li>Lavazza (Italia): corso di chemiometria, applicazione dell&apos;Experimental Design e dell&apos;analisi multivariata lungo l&apos;intera filiera di produzione del caffè;</li>
-            <li>Merck Serono (Italia): corso di chemiometria;</li>
-            <li>Mozarc Medical (Italia): corso di chemiometria, applicazione dell&apos;Experimental Design e dell&apos;analisi multivariata ai dispositivi medici;</li>
-            <li>Olon S.p.A. (Italia): corso di chemiometria, applicazione dell&apos;Experimental Design ai processi sintetici, ottimizzazione di metodi analitici e analisi statistica finalizzata al controllo qualità;</li>
-            <li>Perkin-Elmer (USA): applicazione dell&apos;Experimental Design alla progettazione di colonne cromatografiche;</li>
-            <li>Procos SPA (Italia): corso di chemiometria, applicazione dell&apos;Experimental Design ai processi sintetici e ottimizzazione di metodi analitici;</li>
-            <li>Roquette Italia S.P.A. (Italia): corso di chemiometria, monitoraggio di processo multivariato.</li>
-          </ul>
-        </section>
-        
-        <section className="mb-10">
-          <h2 className="text-2xl font-bold mb-4 text-[#3064AC]">PUBBLICAZIONI</h2>
-
-        <PublicationsList/>
-        </section>
-        </div>
-        </div>
         <Footer />
-        </>
-        );
-    }
+    </>
+  )
+}
